@@ -1,0 +1,80 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{davidLayout}
+
+% Packages used by this style file
+
+\usepackage[utf8]{inputenc}
+
+
+\RequirePackage{amsmath,amssymb,amsfonts,mathrsfs}
+
+
+\RequirePackage{fancyhdr}
+
+%kein einrücken nach absätzen
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+
+
+
+
+% make nice subgraphs
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\captionsetup[subfigure]{format=subfig,labelsep=colon,labelformat=simple}
+
+%reduce space above section start
+\renewcommand*{\chapterheadstartvskip}{\vspace*{-5pt}} 
+
+
+% Setup fancy headings
+\pagestyle{fancyplain}
+
+
+\renewcommand \chaptermark[1]{\markboth{\thechapter. \ #1}{}}
+	
+\renewcommand \sectionmark[1]{\markright{\thesection\ #1}{}}
+
+
+
+
+
+
+%wenn Inhaltsverzeichnis hat eine gerade  Seitenzahl hat ist dieser teil richtig
+\fancyhead[LE]{\fancyplain{}{\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\thepage}}
+
+%wenn Inhaltsverzeichnis hat eine ungerade Seitenzahl hat ist dieser teil richtig
+%\fancyhead[LE]{\fancyplain{}{\rightmark}}
+%\fancyhead[CE]{\fancyplain{}{}}
+%\fancyhead[RE]{\fancyplain{}{\thepage}}
+%\fancyhead[LO]{\fancyplain{}{\thepage}}
+%\fancyhead[CO]{\fancyplain{}{}}
+%\fancyhead[RO]{\fancyplain{}{\leftmark}}
+
+%Set up foot
+\renewcommand{\footrulewidth}{0.4pt}%generates line bottom of page
+
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize  }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize  }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+
+%for plain page style e.g. for chapters
+\fancypagestyle{plain}{% 
+	\fancyhf{} % clear all header and footer fields
+	\fancyhead[LE]{\fancyplain{}{\thepage}}
+	\fancyhead[RO]{\fancyplain{}{\thepage}}
+	\renewcommand{\headrulewidth}{0.4pt} 
+	\renewcommand{\footrulewidth}{0.4pt}}
+
+

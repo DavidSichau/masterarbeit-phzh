@@ -1,0 +1,118 @@
+\documentclass[12pt,oneside,  DIV13]{scrbook}
+
+% deutsche Silbentrennung
+
+\usepackage[ngerman]{babel}
+
+\usepackage{davidLayout}
+
+\usepackage{enumitem}
+\usepackage{float}
+
+\usepackage[
+	natbib,
+	isbn=true,
+	backend=biber,
+	doi=true,
+	url=false,
+	authordate
+]{biblatex-chicago}  
+\DefineBibliographyStrings{german}{%
+  andothers = {et al.},
+}
+\addbibresource{../../../../library.bib}
+
+\usepackage{graphicx}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue
+}
+\mdfsetup{%
+leftmargin =+5cm,
+	rightmargin=+5cm,
+   	roundcorner=5pt,
+   	backgroundcolor=gray!20
+}
+
+\newcommand{\github}[1] {
+  \begin{mdframed}
+  \begin{center}
+  Code erhältlich auf:\\
+  \href{#1}{
+    \includegraphics[width=0.4\textwidth]{graphics/GitHubLogo.png}
+    }\\
+    \vspace{-0.3cm}
+    {\tiny \href{#1}{#1}}
+  \end{center}
+  
+  \end{mdframed}
+}
+
+
+\begin{document}
+\frontmatter
+
+\begin{titlepage}
+	\vspace*{2cm}
+	\begin{center}
+		{\LARGE Super Title \vspace*{2cm}\\ Master Thesis\\}
+		\vspace*{2cm}\large David-Matthias Sichau \\
+		\vspace*{1.5cm} Supervisors:\\ Pitt Hild, \\
+		\vspace*{1cm} GroupName\\
+		\vspace*{2cm}{\large 24. September 2014, Zürich}\\
+	\end{center}
+\end{titlepage}
+
+
+
+\frontmatter 
+\tableofcontents
+
+
+
+\chapter*{Abstrakt}
+
+
+
+
+\github{http://sichau.eu}
+
+
+Toller Abstrakt
+
+\mainmatter
+
+\input{content/einleitung}
+\input{content/theorie}
+
+
+
+
+
+
+\chapter{Untersuchungsanlage}
+
+\chapter{Ergebnisse}
+
+\chapter{Diskussion}
+
+\chapter{Ausblick}
+
+
+\appendix 
+
+
+
+\backmatter	
+
+\printbibliography
+
+\chapter{Anhang}
+
+\end{document}
