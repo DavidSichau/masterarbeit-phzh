@@ -1,7 +1,20 @@
-setwd("~/Dropbox/01_PHZH/01_Masterarbeit/Auswertung/")
-data <- read.csv(file="Codierung.csv", head=TRUE, sep=";")
-shapiro.test(data$B7)
 
-shapiro.test(data$B3)
-ks.test(data$M201.u, "pnorm")
 
+data <- read.csv(file="Codierung.csv", head=TRUE, sep=",")
+
+# Entfernen von Reihen mit Beschriftung oder mit identischen Werten
+df <- data
+df <- df[,-which(names(df) %in% c("Code", "M201_5.1"))]
+# Shapiro-Wilks test
+lapply(df, shapiro.test)
+
+
+
+
+# Anderson-Darling test
+lapply(df, ad.test)
+
+
+#Visuelle Überprüfung
+qqnorm(data$NoteNatW)
+qqline(data$NoteNatW)
