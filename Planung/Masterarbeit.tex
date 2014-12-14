@@ -1,0 +1,108 @@
+
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl} % A4 paper and 11pt font size
+
+
+\usepackage[ngerman]{babel} % German language/hyphenation
+
+\usepackage[utf8]{inputenc} 
+\usepackage{setspace}
+\onehalfspacing 
+%\usepackage{cite}
+
+\usepackage[
+	natbib,
+	bibencoding=utf8,
+	isbn=true,
+	backend=biber,
+	doi=true,
+	url=false,
+	authordate
+]{biblatex-chicago}  
+\DefineBibliographyStrings{german}{%
+  andothers = {et al.},
+}
+\addbibresource{../../../../library.bib}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{fancyhdr} % Custom headers and footers
+%\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\pagestyle{fancyplain}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+
+\chead{ \fancyplain{}{\rightmark} }
+
+\cfoot{ \fancyplain{}{\thepage} }
+
+
+
+\usepackage{csquotes}
+
+
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{PHZH} \\ [0.4cm] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.3cm] % Thin top horizontal rule
+\huge Konzept Masterarbeit \\ % The assignment title
+\horrule{2pt} \\[0.4cm] % Thick bottom horizontal rule
+}
+
+\author{David Sichau} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+
+
+\begin{document}
+
+\maketitle % Print the title
+
+\tableofcontents
+
+
+\section{Konzept}
+
+Im Rahmen des ExKoNawi Projektes soll untersucht werden, inwiefern die strategische Kompetenz des Messens von Lernenden vom Kontext abhängig ist. 
+Dazu soll angeschaut werden inwiefern der Kompetenz Begriff und der Begriff des Transfers theoretisch in der Literatur verknüpft sind. Es wird dabei insbesondere auf die Historische Entwicklung des Begriffes des Transfers und wie dies mit dem Kompetenz Begriff nach Klieme und Weinert verknüpft werden kann zu einem theoretischen Rahmenkonstrukt.
+
+\section{Fragestellungen}
+
+Die Hauptfragestellung lautet:
+\begin{quote}
+Ist das strategische Wissen von Lehrenden in unterschiedlichen Kontexten gleich verfügbar?
+\end{quote}
+Es gibt jedoch noch weitere Forschungsfragen, die sich aus dieser Fragestellung ergeben. So soll auch untersucht werden ob es Kriterien gibt, welche eventuelle Unterschiede in der Verfügbarkeit des Wissens einordnen könnten.
+
+Die Daten sollen auch einer explorativen Datenanalyse unterzogen werden um noch unbekannte oder nicht erwartende zusammenhänge aufzuzeigen.
+
+\section{Untersuchungsdesign}
+
+Aufbauend auf diesem Rahmenkonstrukt und der Fragestellung wird eine Untersuchung an 4 Klassen durchgeführt. Diese Klassen werden jeweils 3 Test zur Strategischen Kompetenz des Messens erhalten, wobei jedoch der Kontext indem sie die Kompetenz des Messens anwenden unterschiedlich ist. 
+
+\section{Bisher untersuchte Literatur}
+
+Bisher wurde folgende Literatur untersucht. Die Literatur Recherche ist noch nicht abgeschlossen und daher wird im Rahmen der Arbeit noch zahlreiche weitere Literatur hinzukommen.
+
+
+
+\printbibliography[heading=none]
+
+
+
+
+
+\end{document}
