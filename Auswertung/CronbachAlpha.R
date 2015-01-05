@@ -1,3 +1,4 @@
+install.packages("psych")
 library(psych)
 
 data <- read.csv(file="./CodierungNeu.csv", head=TRUE, sep=",")
