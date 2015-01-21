@@ -1,6 +1,6 @@
 
 
-data <- read.csv(file="Codierung.csv", head=TRUE, sep=",")
+data <- read.csv(file="./CodierungNeu2.csv", head=TRUE, sep=",")
 
 # Entfernen von Reihen mit Beschriftung oder mit identischen Werten
 df <- data
