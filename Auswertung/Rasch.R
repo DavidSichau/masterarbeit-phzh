@@ -1,7 +1,6 @@
-install.packages("eRm", dependencies=TRUE)
 library(eRm)
 
-data <- read.csv(file="./CodierungNeu2.csv", head=TRUE, sep=",")
+data <- read.csv(file="./CodierungNeu3.csv", head=TRUE, sep=",")
 raschData <- subset(data, select = c(M201_Q1  , M201_Q2  , M201_Q3  , M201_Q4  , M201_Q5,M301_Q1  , M301_Q2  , M301_Q3  , M301_Q4  , M301_Q5,M305_Q1  , M305_Q2  , M305_Q3  , M305_Q4  , M305_Q5   ))
 
 result <- RM(raschData)
