@@ -1,0 +1,82 @@
+\section{Kodierung}
+
+Wie bereits geschrieben wurde die Erstkodierung von David Sichau durchgeführt. Es wurden eine Zweitkodierung von  15 \% zufällig ausgewählten (per Random Generator) Auswertungsbögen von Pitt Hild  durchgeführt. Es wurden dabei die gleichen Kodierschemata verwendet, welche sich im Anhang der Arbeit befinden. %TODO Referenz zu Koderischemata
+
+Die beiden Kodierungen wurden auf prozedurale Übereinstimmung $p_0$ untersucht und zusätzlich noch ungewichtete Cohen's Kappa $\kappa$ als Zufalls-korrigierter Koeffizient berechnet. Bei einem Teil der Datensätze war dies mathematisch nicht möglich (Division durch 0), daher können nicht für alle Items ein Cohen's Kappa angegeben werden. In Tabelle \ref{tab:CohenKappa} sind alle Ergebnisse zusammengefasst.
+
+
+\github{http://git.io/mk9z-Q}
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{|l|l|l||l|l|l||l|l|l|}
+\hline Item & $p_0$ & $\kappa$ & Item & $p_0$ & $\kappa$ & Item & $p_0$ & $\kappa$\\
+\hline M201\_1.1 & 1 & 1 & 			M301\_1.1 & 0.91 & 0.74 & 	M305\_1.1 & 0.91 & 0.79 \\ 
+\hline M201\_1.2 & 0.91 & 0.81 &	M301\_1.2 & 1 & / & 		M305\_1.2 & 1 & 1 \\ 
+\hline M201\_2.1 & 0.81 & 0.67 & 	M301\_2.1 & 0.81 & 0.74 & 	M305\_2.1 & 1 & 1\\ 
+\hline M201\_3.1 & 1 & 1 & 			M301\_3.1 & 0.91 & 0.81 & 	M305\_3.1 & 1 & 1\\ 
+\hline M201\_3.2 & 1 & / & 			M301\_3.2 & 1 & 1 & 		M305\_3.2 & 0.91 & 0.82\\ 
+\hline M201\_4.1 & 0.91 & 0.79 & 	M301\_4.1 & 0.81 & 0.65 & 	M305\_4.1 & 0.91 & 0.81 \\ 
+\hline M201\_4.2 & 0.91 & 0.62 & 	M301\_4.2 & 0.91 & 0.79 & 	M305\_4.2 & 0.91 & 0.74 \\ 
+\hline M201\_4.3 & 1 & / & 			M301\_4.3 & 1 & / & 		M305\_4.3 & 1 & / \\ 
+\hline M201\_4.4 & 1 & / & 			M301\_4.4 & 1 & / & 		M305\_4.4 & 1 & / \\ 
+\hline M201\_5.1 & 1 & / & 			M301\_5.1 & 1 & / & 		M305\_5.1 & 1 & / \\ 
+\hline M201\_5.2 & 0.91 & / & 		M301\_5.2 & 1 & 1 & 		M305\_5.2 & 0.91 & 0.78 \\ 
+
+\hline 
+\end{tabular} 
+  \caption{Übereinstimmung der Kodierungen für die einzelnen Items ($p_0$) und Cohens Kappa $\kappa$.}
+  \label{tab:CohenKappa}
+\end{table}
+
+\section{Fragebogen}
+
+Im standardisierten Teil des Fragebogens wurden Fragen zum absoluten Selbstkonzept nach SESSKO gestellt \citep{Schone2002}. Die verwendeten Fragen sind in Tabelle \ref{tab:SESSKO} aufgeführt. 
+
+
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{|p{3cm}|p{9cm}|p{1cm}|}
+\hline Skala & Frage & $\alpha_d$  \\ 
+\hline SESSKO 18(a) & Ich bin für die Schule sehr begabt. &  0.71  \\ 
+\hline SESSKO 19(a) & Neues zu lernen fällt mir schwer.  &  0.76 \\ 
+\hline SESSKO 20(a) & Ich bin sehr intelligent. &  0.71  \\ 
+\hline SESSKO 21(a) & Ich kann in der Schule viel. &  0.72   \\ 
+\hline SESSKO 22(a) & In der Schule fallen mir viele Aufgaben schwer.  & 0.74   \\ 
+\hline 
+\end{tabular} 
+
+  \caption{Fragen von SESSKO zur Skala "`Schulisches Selbstkonzept - absolut"'  \citep{Schone2002}. $\alpha_d$ bezeichnete das standardisierte Cronbach Alpha wenn dieses Item weggelassen würde.}
+  \label{tab:SESSKO}
+\end{table}
+
+Zusätzlich wurden nach \citet{Dierks2014} Fragen zum Selbstkonzept zu Schulversuchen entwickelt und angepasst. Die entwickelten Fragen sind in Tabelle \ref{tab:NatSK} aufgezeigt.
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{|p{2cm}|p{10cm}|p{1cm}|}
+\hline Kürzel & Frage & $\alpha_d$  \\ 
+\hline NatSK1 & Schulversuche liegen mir nicht besonders. &  0.65  \\ 
+\hline NatSK2 & Schulversuche würde ich viel lieber machen, wenn sie nicht so schwer wären.  &  0.69 \\ 
+\hline NatSK3 & Schulversuche fallen mir schwerer als vielen meiner Mitschüler/innen. &  0.65  \\ 
+\hline NatSK4 & Bei manchen Schulversuche weiss ich gleich: "`Das verstehe ich nie."' &  0.65   \\ 
+\hline NatSK5 & Für Schulversuche habe ich einfach keine Begabung.   & 0.63   \\ 
+\hline NatSK6 & Mit den Aufgaben bei Schulversuche komme ich besser zurecht als viele meiner Mitschüler/innen  & 0.67   \\ 
+\hline NatSK7 & Ich denke, ich bin für Schulversuche begabter als viele meiner Mitschüler/innen.  & 0.66   \\ 
+\hline 
+\end{tabular} 
+
+  \caption{Fragen zum Sebstkonzept bei Schulversuchen abgewandelt nach \citet{Dierks2014}. $\alpha_d$ bezeichnete das standardisierte Cronbach Alpha wenn dieses Item weggelassen würde.}
+  \label{tab:NatSK}
+\end{table}
+
+Es wurde die innere Konsistenz beider Skala überprüft. Bei den der Skala "`Schulisches Selbstkonzept - absolut"' wurde ein standardisiertes Cronbach $\alpha$ von 0.77 erreicht. Die Anzahl vollständig ausgefüllter Fragebögen betrug dabei 69. Alle unvollständigen Items wurden vor der Analyse entfernt. Bei der Skala zum Selbstkonzept bei Schulversuchen wurde ein standardisiertes Cronbach $\alpha$ von 0.69 erreicht. Insgesamt konnten dabei 64 vollständige Fragebögen ausgefüllt werden. 
+\github{http://git.io/WyJH6Q}
+
+
+\section{Korrelationen}
+
+
+
+
