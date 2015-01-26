@@ -2,32 +2,111 @@
 
 Wie bereits geschrieben wurde die Erstkodierung von David Sichau durchgeführt. Es wurden eine Zweitkodierung von  15 \% zufällig ausgewählten (per Random Generator) Auswertungsbögen von Pitt Hild  durchgeführt. Es wurden dabei die gleichen Kodierschemata verwendet, welche sich im Anhang der Arbeit befinden. %TODO Referenz zu Koderischemata
 
-Die beiden Kodierungen wurden auf prozedurale Übereinstimmung $p_0$ untersucht und zusätzlich noch ungewichtete Cohen's Kappa $\kappa$ als Zufalls-korrigierter Koeffizient berechnet. Bei einem Teil der Datensätze war dies mathematisch nicht möglich (Division durch 0), daher können nicht für alle Items ein Cohen's Kappa angegeben werden. In Tabelle \ref{tab:CohenKappa} sind alle Ergebnisse zusammengefasst.
+\subsection{Items}
+Es gab insgesamt elf Items welche nach dem Kodierschemata kodiert wurden.
+
+Die Items wurden auf Interrater-Reliabilität untersucht. Dafür wurden die prozedurale Übereinstimmung $p_0$ und zusätzlich noch das ungewichtete Cohen's Kappa $\kappa$ als Zufalls-korrigierter Koeffizient berechnet. Bei einem Teil der Datensätze war dies mathematisch nicht möglich (Division durch 0), daher können nicht für alle Items ein Cohen's Kappa angegeben werden. In Tabelle \ref{tab:CohenKappa} sind alle Ergebnisse zusammengefasst.
 
 
 \github{http://git.io/mk9z-Q}
 
 \begin{table}[htbp]
   \centering
-\begin{tabular}{|l|l|l||l|l|l||l|l|l|}
-\hline Item & $p_0$ & $\kappa$ & Item & $p_0$ & $\kappa$ & Item & $p_0$ & $\kappa$\\
-\hline M201\_1.1 & 1 & 1 & 			M301\_1.1 & 0.91 & 0.74 & 	M305\_1.1 & 0.91 & 0.79 \\ 
-\hline M201\_1.2 & 0.91 & 0.81 &	M301\_1.2 & 1 & / & 		M305\_1.2 & 1 & 1 \\ 
-\hline M201\_2.1 & 0.81 & 0.67 & 	M301\_2.1 & 0.81 & 0.74 & 	M305\_2.1 & 1 & 1\\ 
-\hline M201\_3.1 & 1 & 1 & 			M301\_3.1 & 0.91 & 0.81 & 	M305\_3.1 & 1 & 1\\ 
-\hline M201\_3.2 & 1 & / & 			M301\_3.2 & 1 & 1 & 		M305\_3.2 & 0.91 & 0.82\\ 
-\hline M201\_4.1 & 0.91 & 0.79 & 	M301\_4.1 & 0.81 & 0.65 & 	M305\_4.1 & 0.91 & 0.81 \\ 
-\hline M201\_4.2 & 0.91 & 0.62 & 	M301\_4.2 & 0.91 & 0.79 & 	M305\_4.2 & 0.91 & 0.74 \\ 
-\hline M201\_4.3 & 1 & / & 			M301\_4.3 & 1 & / & 		M305\_4.3 & 1 & / \\ 
-\hline M201\_4.4 & 1 & / & 			M301\_4.4 & 1 & / & 		M305\_4.4 & 1 & / \\ 
-\hline M201\_5.1 & 1 & / & 			M301\_5.1 & 1 & / & 		M305\_5.1 & 1 & / \\ 
-\hline M201\_5.2 & 0.91 & / & 		M301\_5.2 & 1 & 1 & 		M305\_5.2 & 0.91 & 0.78 \\ 
+\begin{tabular}{ccccccc}
+\toprule   &  \multicolumn{2}{c}{201} &  \multicolumn{2}{c}{301}  & \multicolumn{2}{c}{301}\\
+Item  & $p_0$ & $\kappa$ &  $p_0$ & $\kappa$ &  $p_0$ & $\kappa$\\
+\midrule
+ 1.1 & 1 & 1  & 0.91 & 0.74 & 0.91 & 0.79 \\ 
+ 1.2 & 0.91 & 0.81  & 1 & /  & 1 & 1 \\ 
+ 2.1 & 0.81 & 0.67  & 0.81 & 0.74  & 1 & 1\\ 
+ 3.1 & 1 & 1  & 0.91 & 0.81  & 1 & 1\\ 
+ 3.2 & 1 & /  & 1 & 1  & 0.91 & 0.82\\ 
+ 4.1 & 0.91 & 0.79 & 0.81 & 0.65  & 0.91 & 0.81 \\ 
+ 4.2 & 0.91 & 0.62 & 0.91 & 0.79  & 0.91 & 0.74 \\ 
+ 4.3 & 1 & /  & 1 & /  & 1 & / \\ 
+ 4.4 & 1 & /  & 1 & /  & 1 & / \\ 
+ 5.1 & 1 & /  & 1 & /  & 1 & / \\ 
+ 5.2 & 0.91 & /  & 1 & 1  & 0.91 & 0.78 \\ 
 
-\hline 
+\bottomrule
+
 \end{tabular} 
-  \caption{Übereinstimmung der Kodierungen für die einzelnen Items ($p_0$) und Cohens Kappa $\kappa$.}
+  \caption{Übereinstimmung der Kodierungen für die einzelnen Items ($p_0$) und Cohens Kappa $\kappa$. Für die drei Tests 201 (Chemie-Temperatur), 301 (Physik Kraft) und 305 (Physik Temperatur)}
   \label{tab:CohenKappa}
 \end{table}
+
+\subsection{Qualitätsstandards}
+Aus den elf Items wurden fünf Qualitätsstandards entwickelt \citep{Hild2014a}.
+\subsubsection*{Qualitätsstandard 1}
+Im Qualitätsstandard 1 geht es um das korrekte und präzise messen. Dieser Qualitätsstandard wird nur erreicht wenn Item 1.1 (Richtige Tendenz des Resultates) und Item 1.2 (Ist das Resultat vollständig und korrekt) zusammen mindestens 1 ergeben.
+
+
+\subsubsection*{Qualitätsstandard 2}
+Bei Qualitätsstandard 2 wird die Dokumentation der Messung bewertet . Dieser Qualitätsstandard wird nur erreicht wenn Item 1.2 (Werden alle Messungen und Messergebnisse vollständig dargestellt) mindestens den Wert von 2 erreicht hat. 
+
+\subsubsection*{Qualitätsstandard 3}
+Im dritten Qualitätsstandard wird das Begründen des richtigen Messinstrumentes bewertet. Dieser Standard wird nur erreicht wenn Item 3.1 (Ist das Korrekte Messinstrument gewählt worden) und Item 3.2 (Wird die Wahl des Messinstrumentes korrekt begründet) zusammen zwei ergeben.
+
+\subsubsection*{Qualitätsstandard 4}
+Qualitätsstandard 4 beurteilt die Messwiederholung. Es wird aus Item 4.1 (mehrmaliges Messen), 4.2 (identische Messung), 4.3 (wurde Mittelwert gebildet) und 4.4 (korrekter Mittelwert) gebildet. Diese Level wird erreicht wenn die Items addiert mindestens zwei ergeben.
+
+\subsubsection*{Qualitätsstandard 5}
+Der letzte Qualitätsstandard 5 zeigt auf, inwiefern die Schülerinnen und Schüler Fehlerquellen der Messung begründen können. Dieser Standard besteht aus Item 5.1 (Fehlerkategorien nennen) und 5.2 (Verbesserungsvorschläge) welche zusammen mehr als eins ergeben müssen.
+
+\subsubsection{Erreichte Qualitätsstandards}
+
+In Tabelle \ref{tab:QS} wird ein Überblick über die erreichten Qualitätsstandards aller Schülerinnen und Schüler gegeben. Zusätzlich werden auch die bedingten Qualitätsstandards angeben, welche nur erreicht werden können, wenn der vorhergehende Qualitätsstandard erreicht wurde.
+
+
+\begin{table}[!htbp]
+  \centering
+\begin{tabular}{ccccccccccc}
+\toprule
+ Test & $p_{Q1}$ & $p_{QS1}$ & $p_{Q2}$ & $p_{QS2}$& $p_{Q3}$& $p_{QS3}$& $p_{Q4}$& $p_{QS4}$& $p_{Q5}$& $p_{QS5}$\\ 
+\midrule
+ 201 &   0.51 & 0.51& 0.34 & 0.27 & 0.05 & 0.04 & 0.08 & 0.03 & 0.16 & 0.03 \\ 
+ 301 &   0.62 & 0.62& 0.31 & 0.31 & 0.09 & 0.04 & 0.09 & 0.01 & 0.39 & 0.01\\ 
+ 305 &   0.72 & 0.72& 0.30 & 0.29 & 0.35 & 0.14 & 0.11 & 0.01 & 0.50 & 0.01\\ 
+\bottomrule
+ 
+\end{tabular} 
+
+  \caption{Zusammenfassung der erreichten Qualitätsstandards, wobei $p_{Q1} - p_{Q5}$ den unbedingten Qualitätsstandards entsprechen. Die bedingten Qualitätsstandards werden mit $p_{QS1} - p_{QS5}$ bezeichnet.}
+  \label{tab:QS}
+\end{table}
+
+\subsection{Niveau}
+
+Basierend auf den Qualitätsstandards wurden zwei Niveaus gebildet, welche das erreichte Niveau der Schülerinnen und Schüler bei der Kompetenz des skalenbasierten Messens bezeichnen. Die Niveaus können einen Wert zwischen 0 und 5 annehmen. Eine Übersicht über die erreichten Niveaus wird in Tabelle \ref{tab:Niveau} gegeben.
+\github{http://git.io/bjn9qg}
+\begin{table}[!htbp]
+  \centering
+\begin{tabular}{c|cccccc|cccccc}
+\toprule
+
+  \multicolumn{1}{c}{} &  \multicolumn{6}{c}{uLev} &  \multicolumn{6}{c}{cLev}\\ 
+ Test & 0 & 1 & 2 & 3 & 4 & 5 & 0 & 1 & 2 & 3 & 4 & 5\\ 
+\midrule
+ 201 &   0.36 & 0.24 & 0.22 & 0.13 & 0.03 & 0.03 & 0.40 & 0.24 & 0.32  & 0.01 & 0 & 0.03   \\ 
+ 301 &   0.31 & 0.21 & 0.29 & 0.14 & 0.03 & 0.03  & 0.42 & 0.28 & 0.26 & 0.01 & 0 & 0.03  \\ 
+ 305 &   0.13 & 0.19 & 0.24 & 0.31 & 0.11 & 0.03  & 0.22 & 0.43 & 0.18 & 0.13 & 0.01 & 0.03 \\ 
+\bottomrule
+ 
+\end{tabular} 
+
+  \caption{Prozedural erreichte Niveaus aller Schülerinnen und Schüler. Das unbedingte Niveau wird mit uLev und das bedingte Niveau mit cLev bezeichnet. }
+  \label{tab:Niveau}
+\end{table}
+
+\subsubsection{Unbedingtes Niveau}
+Dieses Niveau ist der Summenscore der einzelnen unbedingten Qualitätsstandards. In der Arbeit wird dieses Level mit \textit{uLev} abgekürzt.
+
+\subsubsection{Bedingtes Niveau}
+
+Dieses Niveau ist der Summenscore der bedingten Qualitätsstandards. Dieses Niveau wird mit \textit{cLev} abgekürzt.
+
+
+
 
 \section{Fragebogen}
 
@@ -75,7 +154,13 @@ Es wurde die innere Konsistenz beider Skala überprüft. Bei den der Skala "`Sch
 \github{http://git.io/WyJH6Q}
 
 
-\section{Korrelationen}
+\section{Unterschiede zwischen den Klassen}
+
+Um festzustellen, ob alle Datensätze der einzelnen Klassen kombiniert werden dürfen wurden zuerst alle Klassen einzeln gegeneinander auf folgende Nullhypothese überprüft: Besteht \underline{kein} Unterschied in den Qualitätsstandards zwischen den einzelnen Klassen?
+
+Aufgrund der geringen Anzahl an Datenätzen in den einzelnen Klassen wurde der exakter Test nach Fisher verwendet. Dieser Test wurde für jeden Qualitätsstandard (bedingt und unbedingt) einzeln jeder Klasse gegen jede andere Klasse durchgeführt. Bei keinem der 60 Tests konnte die Nullhypothese abgelehnt werden (p<0.05). Daher gibt es keinen signifikanten Unterschied zwischen den erreichten Qualitätsstandards und den einzelnen Klassen.  
+
+\github{http://git.io/0DOelQ}
 
 
 
