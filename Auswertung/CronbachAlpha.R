@@ -1,4 +1,3 @@
-install.packages("psych")
 library(psych)
 
 data <- read.csv(file="./CodierungNeu3.csv", head=TRUE, sep=",")
@@ -20,3 +19,6 @@ splitHalf(NatW[c("Nat_SK_1","Nat_SK_2","Nat_SK_3","Nat_SK_4","Nat_SK_5","Nat_SK_
 
 lapply(NatW, shapiro.test)
 lapply(sessko, shapiro.test)
+
+
+
