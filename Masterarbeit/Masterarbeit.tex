@@ -6,9 +6,8 @@
 
 \usepackage{davidLayout}
 
-\usepackage{enumitem}
 \usepackage{float}
-\usepackage[utf8]{inputenc} 
+
 \usepackage[
 	natbib,
 	bibencoding=utf8,
@@ -22,11 +21,12 @@
   andothers = {et al.},
 }
 \addbibresource{../../../../library.bib}
-\usepackage{booktabs}
 
-\usepackage{graphicx}
-\usepackage[framemethod=TikZ]{mdframed}
-\usepackage{caption}
+\usepackage{booktabs} %make nicer tables
+
+
+
+
 \usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -35,8 +35,10 @@
 	urlcolor=blue,
 	citecolor=blue
 }
+
+\usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{%
-leftmargin =+5cm,
+	leftmargin =+5cm,
 	rightmargin=+5cm,
    	roundcorner=5pt,
    	backgroundcolor=gray!20
