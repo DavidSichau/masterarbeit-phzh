@@ -261,3 +261,132 @@ Die Ergebnisse wurden grafisch als Streudiagramme dargestellt (siehe \ref{fig:co
 
 
 \section{Rasch-Analyse}
+
+Als Probabilistische Test-Methode wurde das Rasch Modell verwendet. Der Grund für diese Methodik war, dass es sich bei der Kompetenz des skalenbasierten Messens um ein latentes Merkmal handelt. In anderen Worten die Kompetenz des skalenbaiserten Messens ist nicht direkt beobachtbar.
+
+Es wurde zuerst folgendes Rasch Modell verwendet.
+
+\begin{eqnarray}
+P(U_{ij}=u_{ij}|\theta_i,\beta_j) = \frac{e^{u_{ij}(\theta_i-\beta_j)}}{1+e^{\theta_i-\beta_j}}
+\end{eqnarray}
+
+Wobei i=1,…,n die Zählvariable für eine Person ist und j=1,…,m die Zählvariable für eine Aufgabe darstellt. Die Variable $u_{ij} \in \{0,1\}$ die dichotome Antwort einer Person auf eine Frage ist. Die Variable $\beta_j$ beschreibt den Schwierigkeitsgrad einer Aufgabe und $\theta_j$ die latente Fähigkeit einer Person.
+
+Bei der Item-Response-Theorie (Probabilistische Test-Methoden) wird angenommen , dass das Ergebnis einer Person nicht deterministisch ist, sondern zufällig sein kann. Daher soll mit dem Rasch Modell die Lösungswahrscheinlichkeit jeder Aufgabe $U_{ij}$ berechnet werden. Diese Lösungswahrscheinlichkeit hängt sowohl von der Fähigkeit der Person $\theta_j$ als auch von der Schwierigkeit der Aufgabe $\beta_i$ ab. Diese Lösungswahrscheinlichkeiten werden basierend auf den Testergebnissen $u_{ij}$ geschätzt.
+
+\subsection{Parameterschätzung}
+Für die Parameterschätzung gibt es verschieden Ansätze. Da die beste Methode von den Daten abhängig ist wurde in einem ersten Schritt das Rasch-Modell sowohl mit der bedingte Maximum-Likelihood-Schätzung, als auch mit der marginal Maximum-Likelihood-Schätzung getestet und die Resultate wurden verglichen. 
+
+Bei der bedingten Maximum-Likelihood-Schätzung wird ein zweistufiges Vorgehen gewählt. Zuerst werden die Aufgaben-Parameter geschätzt ohne die Personen Parameter zu beachten. Erst in einem zweiten Schritt werden die Personen-Parameter geschätzt. Ein Problem dieser Methodik ist, dass Personenfertigkeiten von Personen, welche keine oder alle Aufgaben gelöst haben nicht geschätzt werden können \citep{Mair2007}.
+
+In der marginalen Maximum-Likelihood-Schätzung wird angenommen, dass für die Personenfähigkeiten in der Stichprobe eine Normalverteilung vorliegt. Diese Annahme ist insbesondere dann problematisch, wenn nur eine Stichprobe der Gesamtbevölkerung verwendet wird \citep{Rizopoulos2006}.
+
+Da beide Schätzungen für den vorliegenden Datensatz problematisch sein könnten, wurde das Rasch-Modell mit beiden Ansätzen durchgeführt und die Resultate verglichen. Das Ziel war dabei, den besseren Ansatz für den vorliegenden Datensatz zu finden, um mit diesem Ansatz die weiteren Analysen durchzuführen. Als Datensatz für diesen Vergleich wurden die 15 unbedingten Qualitätsstandards verwendet. Die Resultate sind in Abbildung \ref{fig:RaschVergleich} ersichtlich. Es gibt für diesen Datensatz keinerlei Unterschied in beiden Parameterschätzern.
+
+
+\begin{figure}[htbp]
+
+\centering
+\includegraphics[width=0.7\linewidth]{graphics/RaschVergleich.png}
+\caption{Vergleich des Rasch Modells mit der bedingten Maximum-Likelihood-Schätzung und der marginalen Maximum-Likelihood-Schätzung. Da alle Punkte auf einer Geraden liegen, gibt es keinen Unterschied zwischen den unterschiedlichen Schätzmethoden für den vorliegenden Datensatz der 15 unbedingten Qualitätsstandards.  }
+\label{fig:RaschVergleich}
+\end{figure}
+
+\github{http://git.io/FRxZ}
+
+
+\subsection{Modellkontrolle des Rasch-Modells}
+
+Um das Rasch Modell zu Validieren wurde das Modell mit Hilfe des Andersens Likelihood-Quotienten Test validiert. Für alle 15 Qualitätsstufen führte dies zu Problemen und der Test konnte nicht durchgeführt werden. Nachdem die Qualitätsstufen vier und fünf entfernt wurden, konnte das reduzierte Modell validiert werden. Als Splitkriterium wurde der Mittelwert der Personen-Randsummen verwendet. 
+
+Der p-Wert des Andersens Likelihood-Quotienten Test beträgt $p=0.14$. Daher liegt jetzt keine signifikante Modellverletzung vor, die Aufgaben Parameter unterscheiden sich nicht signifikant für Personen mit niedrigen und hohen Randsummen. In der Grafik \ref{fig:RaschKontrolle} sind die Resultate des Tests grafisch dargestellt. Es ist ersichtlich, dass keine Aufgabe das Modell verletzt, da die 95\%-Konfidenz-Regionen alle die Diagonale berühren.
+
+
+\begin{figure}[htbp]
+
+\centering
+\includegraphics[width=0.8\linewidth]{graphics/GOFQ.png}
+\caption{Modellkontrolle des Rasch-Modells: kein Qualitätsstandard hat eine signifikante Abweichung von der Diagonalen, daher gibt es keine signifikanten Unterschiede für Personen mit niedrigen und hohen Randsummen in den Qualitätsstandard. }
+\label{fig:RaschKontrolle}
+\end{figure}
+
+Zusätzlich wurden die Qualitätsstandards mit dem Wald-Test überprüft. Damit können Qualitätsstandard, welche einen signifikanten Unterschied habe, identifiziert werden. In Tabelle \ref{tab:WaldTest} befinden sich die p-Werte des Wald-Test für die einzelnen Qualitätsstandards.
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{ccccccccccc}
+\toprule
+ \multicolumn{3}{c}{Test 201} &&  \multicolumn{3}{c}{Test 301}&&  \multicolumn{3}{c}{Test 305}\\ 
+ Q1 & Q2 & Q3 && Q1 & Q2 & Q3 && Q1 & Q2 & Q3  \\ 
+\midrule
+  0.44 & 0.08 & 0.24 && 0.11 & 0.33 & 0.56 && 0.38 & 0.14 & 0.61   \\ 
+
+\bottomrule
+\end{tabular} 
+  \caption{p-Werte des Wald-Tests für die Qualitätsstandards, mit dem Mittelwert der Personen-Randsummen als Splitkriterium. Keine dieser p-Werte liegt unter halb von $0.05$ daher gibt es keine signifikanten Unterschiede in den Qualitätsstandards }
+  \label{tab:WaldTest}
+\end{table}
+
+\github{http://git.io/FE3m}
+
+\subsection{Unterschied in den Qualitätsstandards}
+
+Nachdem das Modell kontrolliert wurde soll nun überprüft werden ob es einen Unterschied in den Qualitätsstandards zwischen den einzelnen Test gibt.
+
+
+  
+ \begin{figure}[htp]
+ \centering
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/ICCQ1.png}
+   \caption{ICC Plot für Qualitätsstandard 1}
+   \label{fig:ICCQ1}
+ \end{subfigure}
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/ICCQ2.png}
+   \caption{ICC Plot für Qualitätsstandard 2}
+   \label{fig:ICCQ2}
+ \end{subfigure}
+ \end{figure}
+ \begin{figure}[htbp]
+ \ContinuedFloat % continue from previous page
+ \centering
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/ICCQ3.png}
+   \caption{ICC Plot für Qualitätsstandard 3}
+   \label{fig:ICCQ3}
+ \end{subfigure}
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/ICCQ123.png}
+   \caption{ICC Plot für Qualitätsstandard 1,2 und 3}
+   \label{fig:ICCQ123}
+ \end{subfigure}
+ 
+ \caption{Aufgabencharakteristische Kurven für die Qualitätsstandards 1,2 und 3 für alle drei Tests.}
+ \label{fig:corLev}
+ \end{figure}
+ 
+ \begin{figure}[htbp]
+ 
+ \centering
+ \includegraphics[width=0.8\linewidth]{graphics/PersonItemMap.png}
+ \caption{Person-Item-Map auf welcher die Verteilung der Personen basierend auf der latenten Skala ersichtlich ist und die Lage der Aufgaben-Parameter auf der latenten Skala. }
+ \label{fig:PersonItemMapQ}
+ \end{figure}
+ 
+ In Tabelle \ref{tab:betaQ} finden sich die Aufgaben-Parameter $\beta_j$ der einzelnen Qualitätsstandards.
+ 
+ \begin{table}[htbp]
+   \centering
+ \begin{tabular}{ccccccccccc}
+ \toprule
+  \multicolumn{3}{c}{Test 201} &&  \multicolumn{3}{c}{Test 301}&&  \multicolumn{3}{c}{Test 305}\\ 
+  Q1 & Q2 & Q3 && Q1 & Q2 & Q3 && Q1 & Q2 & Q3  \\ 
+ \midrule
+   1.215 & 0.159 & -2.633 && 1.142 & -0.278 & -2.086 && 2.305 & 0.017 & 0.159   \\ 
+ 
+ \bottomrule
+ \end{tabular} 
+   \caption{Aufgaben-Parameter $\beta_j$ für die einzelnen Qualitätsstandards. }
+   \label{tab:betaQ}
+ \end{table}
