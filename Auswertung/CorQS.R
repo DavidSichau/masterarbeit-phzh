@@ -68,8 +68,8 @@ cor.test(d$M201.k, d$M301.k,method="spearm")
 theme_set(theme_grey(base_size = 18)) 
 ggplot(d, aes(x=M201.k, y=M301.k)) +
   geom_smooth(method=lm) + # Add linear regression line 
-  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = -.20"))+
-  geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = -.08"))+
+  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = 0.20"))+
+  geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = 0.08"))+
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
   ylab("Test 301") +
@@ -81,8 +81,8 @@ cor.test(d$M201.u, d$M301.u,method="spearm")
 theme_set(theme_grey(base_size = 18)) 
 ggplot(d, aes(x=M201.u, y=M301.u)) +
   geom_smooth(method=lm) + # Add linear regression line 
-  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = -.26"))+
-  geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = -.02"))+
+  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = 0.26"))+
+  geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = 0.02"))+
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
   ylab("Test 301") +
@@ -96,7 +96,7 @@ cor.test(d$M201.k, d$M305.k,method="spearm")
 theme_set(theme_grey(base_size = 18)) 
 ggplot(d, aes(x=M201.k, y=M305.k)) +
   geom_smooth(method=lm) + # Add linear regression line 
-  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = -.33"))+
+  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = 0.33"))+
   geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = 4e-3"))+
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
@@ -109,7 +109,7 @@ cor.test(d$M201.u, d$M305.u,method="spearm")
 theme_set(theme_grey(base_size = 18)) 
 ggplot(d, aes(x=M201.u, y=M305.u)) +
   geom_smooth(method=lm) + # Add linear regression line 
-  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = -.44"))+
+  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = 0.44"))+
   geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = 1e-4"))+
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
@@ -123,8 +123,8 @@ cor.test(d$M301.k, d$M305.k,method="spearm")
 theme_set(theme_grey(base_size = 18)) 
 ggplot(d, aes(x=M301.k, y=M305.k)) +
   geom_smooth(method=lm) + # Add linear regression line 
-  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = -.01"))+
-  geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = -.89"))+
+  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = 0.01"))+
+  geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = 0.89"))+
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 301") +
   ylab("Test 305") +
@@ -136,7 +136,7 @@ cor.test(d$M301.u, d$M305.u,method="spearm")
 theme_set(theme_grey(base_size = 18)) 
 ggplot(d, aes(x=M301.u, y=M305.u)) +
   geom_smooth(method=lm) + # Add linear regression line 
-  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = -.36"))+
+  geom_text(data = data.frame(), aes(4.25, 4.5, label =   "Spearman-rho = 0.36"))+
   geom_text(data = data.frame(), aes(4.5, 4.3, label = "p-value = 2e-3"))+
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 301") +
