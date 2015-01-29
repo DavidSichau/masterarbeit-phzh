@@ -7,7 +7,6 @@ rmQ <- RM(raschDataQ)
 lr1<-LRtest(rmQ, splitcr = "mean", se=TRUE)
 plotGOF(lr1, tlab = "number", ylab="Randsumme >= Mittelwert", xlab="Randsumme < Mittelwert",
         conf = list(gamma=0.95, col=1), main="")
-LRtest(rmQ, splitcr = geschlecht)
 Waldtest(rmQ, splitcr="mean")
 
 raschDataQ2 <- subset(data, select = c(M201_Q1  , M201_Q2  , M201_Q3,M301_Q1  , M301_Q2  , M301_Q3  ,M305_Q1  , M305_Q2  , M305_Q3     ))
