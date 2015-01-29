@@ -73,7 +73,6 @@ ggplot(d, aes(x=M201.k, y=M301.k)) +
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
   ylab("Test 301") +
-  ggtitle("kLev")
 ggsave(file="cor201301k.png")
 
 
@@ -86,7 +85,6 @@ ggplot(d, aes(x=M201.u, y=M301.u)) +
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
   ylab("Test 301") +
-  ggtitle("uLev")
 ggsave(file="cor201301u.png")
 
 
@@ -101,7 +99,6 @@ ggplot(d, aes(x=M201.k, y=M305.k)) +
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
   ylab("Test 305") +
-  ggtitle("kLev")
 ggsave(file="cor201305k.png")
 
 
@@ -114,7 +111,6 @@ ggplot(d, aes(x=M201.u, y=M305.u)) +
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 201") +
   ylab("Test 305") +
-  ggtitle("uLev")
 ggsave(file="cor201305u.png")
 
 
@@ -128,7 +124,6 @@ ggplot(d, aes(x=M301.k, y=M305.k)) +
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 301") +
   ylab("Test 305") +
-  ggtitle("kLev")
 ggsave(file="cor301305k.png")
 
 
@@ -141,6 +136,5 @@ ggplot(d, aes(x=M301.u, y=M305.u)) +
   stat_sum( geom = "point", aes(size = ..n..))+ scale_size(range = c(2, 10))+
   xlab("Test 301") +
   ylab("Test 305") +
-  ggtitle("uLev")
 ggsave(file="cor301305u.png")
 

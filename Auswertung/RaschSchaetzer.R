@@ -6,6 +6,10 @@ raschData <- subset(data, select = c(M201_Q1  , M201_Q2  , M201_Q3  , M201_Q4  ,
 
 rm1 <- RM(raschData)
 rm2 <- rasch(raschData, start.val="random", constraint = cbind(ncol(raschData)+1,1))
+factor.scores(rm2)
+pp<-person.parameter(rm1)
+summary(pp)
+pp$theta.table
 
 df<-data.frame(x=rm2$coefficients[,1],y=rm1$betapar)
 theme_set(theme_grey(base_size = 18)) 
@@ -14,5 +18,4 @@ ggplot(df,aes(x=rm2$coefficients[,1], y= rm1$betapar)) +
   geom_smooth(method=lm) + # Add linear regression line 
   xlab("marginaler Maximum-Likelihood") +
   ylab("bedingter Maximum-Likelihood") +
-  ggtitle("Vergleich Parameter Schätzer")
 ggsave(file="RaschVergleich.png")
