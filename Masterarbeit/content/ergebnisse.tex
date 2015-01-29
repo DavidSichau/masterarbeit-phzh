@@ -212,16 +212,16 @@ Die Ergebnisse wurden grafisch als Streudiagramme dargestellt (siehe \ref{fig:co
   \label{tab:CorNiveau}
 \end{table}
  
-\begin{figure}[bhtp]
+\begin{figure}[htbp]
 \centering
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=1.0\linewidth]{graphics/cor201301u.png}
-  \caption{unbedingte Niveau-Stufen}
+  \caption{Korrelation der unbedingten Niveau-Stufen zwischen Test 301 und 201.}
   \label{fig:cor201301k}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=1.0\linewidth]{graphics/cor201301k.png}
-  \caption{bedingte Niveau-Stufen}
+  \caption{Korrelation der bedingten Niveau-Stufen zwischen Test 301 und 201.}
   \label{fig:cor201301u}
 \end{subfigure}
 \end{figure}
@@ -230,12 +230,12 @@ Die Ergebnisse wurden grafisch als Streudiagramme dargestellt (siehe \ref{fig:co
 \centering
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=1.0\linewidth]{graphics/cor201305u.png}
-  \caption{unbedingte Niveau-Stufen}
+  \caption{Korrelation der unbedingten Niveau-Stufen zwischen Test 305 und 201.}
   \label{fig:cor201305k}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=1.0\linewidth]{graphics/cor201305k.png}
-  \caption{bedingte Niveau-Stufen}
+  \caption{Korrelation der bedingten Niveau-Stufen zwischen Test 305 und 201.}
   \label{fig:cor201305u}
 \end{subfigure}
 \end{figure}
@@ -244,22 +244,22 @@ Die Ergebnisse wurden grafisch als Streudiagramme dargestellt (siehe \ref{fig:co
 \centering
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=1.0\linewidth]{graphics/cor301305u.png}
-  \caption{unbedingte Niveau-Stufen}
+  \caption{Korrelation der unbedingten Niveau-Stufen zwischen Test 305 und 301.}
   \label{fig:cor301305k}
 \end{subfigure}
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=1.0\linewidth]{graphics/cor301305k.png}
-  \caption{bedingte Niveau-Stufen}
+  \caption{Korrelation der bedingten Niveau-Stufen zwischen Test 305 und 301.}
   \label{fig:cor301305u}
 \end{subfigure}
 
-\caption{Korrelation zwischen den Niveau Stufen zwischen den einzelnen Tests. Der Durchmesser der Punkte ist ein Mass für die Anzahl an Datenpunkten, welche an dieser Position liegen. Die blaue Gerade ist die lineare Regression der zugrunde liegenden Daten, der dunkel graue Bereich stellt das Vertrauensintervall (95\%) der linearen Regression dar. Zusätzlich sind noch Spearmans $rho$ und der p-Wert des Signifikanztests angegeben.}
+\caption{Korrelation zwischen den Niveau-Stufen der einzelnen Tests. Der Durchmesser der Punkte ist ein Mass für die Anzahl an Datenpunkten, welche an dieser Position liegen. Die blaue Gerade ist die lineare Regression der zugrunde liegenden Daten, der dunkel graue Bereich stellt das Vertrauensintervall (95\%) der linearen Regression dar. Zusätzlich sind noch Spearmans $rho$ und der p-Wert des Signifikanztests angegeben.}
 \label{fig:corLev}
 \end{figure}
 
 \github{http://git.io/FnbD}
 
-
+\clearpage
 \section{Rasch-Analyse}
 
 Als Probabilistische Test-Methode wurde das Rasch Modell verwendet. Der Grund für diese Methodik war, dass es sich bei der Kompetenz des skalenbasierten Messens um ein latentes Merkmal handelt. In anderen Worten die Kompetenz des skalenbaiserten Messens ist nicht direkt beobachtbar.
@@ -281,16 +281,22 @@ Bei der bedingten Maximum-Likelihood-Schätzung wird ein zweistufiges Vorgehen g
 
 In der marginalen Maximum-Likelihood-Schätzung wird angenommen, dass für die Personenfähigkeiten in der Stichprobe eine Normalverteilung vorliegt. Diese Annahme ist insbesondere dann problematisch, wenn nur eine Stichprobe der Gesamtbevölkerung verwendet wird \citep{Rizopoulos2006}.
 
-Da beide Schätzungen für den vorliegenden Datensatz problematisch sein könnten, wurde das Rasch-Modell mit beiden Ansätzen durchgeführt und die Resultate verglichen. Das Ziel war dabei, den besseren Ansatz für den vorliegenden Datensatz zu finden, um mit diesem Ansatz die weiteren Analysen durchzuführen. Als Datensatz für diesen Vergleich wurden die 15 unbedingten Qualitätsstandards verwendet. Die Resultate sind in Abbildung \ref{fig:RaschVergleich} ersichtlich. Es gibt für diesen Datensatz keinerlei Unterschied in beiden Parameterschätzern.
+Da beide Schätzungen für den vorliegenden Datensatz problematisch sein könnten, wurde das Rasch-Modell mit beiden Ansätzen durchgeführt und die Resultate verglichen. Das Ziel war dabei, den besseren Ansatz für den vorliegenden Datensatz zu finden, um mit diesem Ansatz die weiteren Analysen durchzuführen. Als Datensatz für diesen Vergleich wurden die 15 unbedingten Qualitätsstandards verwendet. Die Resultate sind in Abbildung \ref{fig:RaschVergleich} ersichtlich. Es gibt für diesen Datensatz keinerlei Unterschied in der Schätzung der Schwierigkeitsgrad der einzelnen Qualitätsstandards. 
+
+Bei der Schätzung der Personen-Parametern konnte die bedingten Maximum-Likelihood-Schätzung alle 72 Personen-Fähigkeiten ohne Extrapolationen berechnen. Die marginalen Maximum-Likelihood-Schätzung konnte jedoch nur die Personen-Fähigkeiten von 64 Personen berechnen. Daher wird in der weiteren Arbeit für alle Rasch Modelle jeweils der bedingten Maximum-Likelihood-Schätzer verwendet.
 
 
 \begin{figure}[htbp]
 
 \centering
-\includegraphics[width=0.7\linewidth]{graphics/RaschVergleich.png}
+\includegraphics[width=0.6\linewidth]{graphics/RaschVergleich.png}
 \caption{Vergleich des Rasch Modells mit der bedingten Maximum-Likelihood-Schätzung und der marginalen Maximum-Likelihood-Schätzung. Da alle Punkte auf einer Geraden liegen, gibt es keinen Unterschied zwischen den unterschiedlichen Schätzmethoden für den vorliegenden Datensatz der 15 unbedingten Qualitätsstandards.  }
 \label{fig:RaschVergleich}
 \end{figure}
+
+
+Es gibt noch weitere Parameter Schätzer wie den Bayesianischen Ansatz, welcher Markov-Chain-Monte-Carlo Methoden verwendet. Dieser trifft jedoch auch Annahmen über die Verteilung der Personen Parameter \citep[siehe Kapitel 3]{Fischer1995}. Die Annahmen decken sich daher mit dem marginalen Maximum-Likelihood Schätzer. 
+
 
 \github{http://git.io/FRxZ}
 
@@ -370,7 +376,7 @@ Nachdem das Modell kontrolliert wurde soll nun überprüft werden ob es einen Un
  
  \centering
  \includegraphics[width=0.8\linewidth]{graphics/PersonItemMap.png}
- \caption{Person-Item-Map auf welcher die Verteilung der Personen basierend auf der latenten Skala ersichtlich ist und die Lage der Aufgaben-Parameter auf der latenten Skala. }
+ \caption{Person-Item-Map auf welcher die Verteilung der Personen basierend auf der latenten Skala ersichtlich ist und die Lage der Aufgaben-Parameter auf der latenten Skala. Anhand dieser Darstellung kann man sehen, dass z.B. der Qualitätsstandard 1 im Test 201 und im Test 301 einen sehr ähnlichen Schwierigkeitsgrad besitzen. }
  \label{fig:PersonItemMapQ}
  \end{figure}
  
@@ -390,3 +396,147 @@ Nachdem das Modell kontrolliert wurde soll nun überprüft werden ob es einen Un
    \caption{Aufgaben-Parameter $\beta_j$ für die einzelnen Qualitätsstandards. }
    \label{tab:betaQ}
  \end{table}
+ 
+ Mit den so gewonnen Aufgaben-Parametern $\beta_j$ wurde nun die Korrelation zwischen den einzelnen Test berechnet. Da mit dem bisherigen Rasch Modell der Personen-Parameter $\theta_i$ über alle drei Tests identisch ist, sollten sich die Schwierigkeitsgerade der einzelnen Qualitätsstufen in den Tests sich nicht unterscheiden. Die Ergebnisse dieser Analyse sind im der Darstellung \ref{fig:corTestQ} und in Tabelle \ref{tab:corTestQ} angegeben. Wichtig dabei ist, dass der Stichproben Umfang mit 3 sehr gering ist. 
+ 
+ 
+  \begin{figure}[htp]
+  \centering
+  \begin{subfigure}{0.32\textwidth}
+    \includegraphics[width=1.0\linewidth]{graphics/GOF201301.png}
+    \caption{Vergleich der Aufgaben-Parameter $\beta_j$ zwischen Test 201 und 301.}
+    \label{fig:cor201301}
+  \end{subfigure}
+  \begin{subfigure}{0.32\textwidth}
+    \includegraphics[width=1.0\linewidth]{graphics/GOF201305.png}
+    \caption{Vergleich der Aufgaben-Parameter $\beta_j$ zwischen Test 201 und 305.}
+    \label{fig:cor201305}
+  \end{subfigure}
+  \begin{subfigure}{0.32\textwidth}
+    \includegraphics[width=1.0\linewidth]{graphics/GOF301305.png}
+    \caption{Vergleich der Aufgaben-Parameter $\beta_j$ zwischen Test 301 und 305.}
+    \label{fig:cor301305}
+  \end{subfigure}
+  
+  \caption{Vergleich der Aufgaben Parameter zwischen den einzelnen Test. Wenn die Schwierigkeiten der Qualitätsstandards übereinstimmen würden, müssten alle Punkte auf der Winke-Halbierenden liegen.}
+  \label{fig:corTestQ}
+  \end{figure}
+ 
+  \begin{table}[htbp]
+    \centering
+  \begin{tabular}{cccccccc}
+  \toprule
+   \multicolumn{2}{c}{201 vs 301} &&  \multicolumn{2}{c}{201 vs 305}&&  \multicolumn{2}{c}{301 vs 305}\\ 
+   p-Wert & ks && p-Wert & ks && p-Wert & ks  \\ 
+  \midrule
+    1.00 & 0.33 && 1.00 & 0.33 && 0.60 & 0.67  \\ 
+  
+  \bottomrule
+  \end{tabular} 
+    \caption{Resultate des Kolmogorow-Smirnow-Test für die Übereinstimmung der Schwierigkeiten der Qualitätsstandards. Wobei ks die Test-Statistik des Kolmogorow-Smirnow-Test ist.}
+    \label{tab:corTestQ}
+  \end{table}
+  
+  \github{http://git.io/FVZt}
+  
+  
+\subsection{Unterschied in den latenten Personen-Fähigkeiten}
+
+Nachdem in einem ersten Schritt die Schwierigkeit der Qualitätsstandards untersucht wurde und festgestellt wurde, dass keine signifikante Unterschiede in den Schwierigkeitsgeraden zwischen den einzelnen Tests existieren, wurde nun ein neues Rasch-Modell entwickelt.
+
+Es werden jetzt drei Rasch Modelle gebildet, bei denen jeder Test und dessen Qualitätsstandards 1-3 in einem Modell kombiniert wurden. Aus den drei Modellen wurden die Personen-Fähigkeiten berechnet und dann mit dem Kolmogorow-Smirnow-Test auf den Goodness of fit überprüft. Dabei wurden Personen Parameter, welche Aufgrund des bedingten Maximum-Likelihood Schätzers nicht berechnet werden konnten aus den Daten heraus gefiltert. Wichtig hierbei ist jedoch, dass diese drei Rasch Modelle aufgrund der Probleme mit dem Parameter Schätzer, nicht evaluiert werden konnten, da die Datensätze zu gering waren. Um diesen Vergleich sinnvoll durchzuführen bräuchte es einen neuen besseren Schätzer. Der marginal Maximum-Likelihood Schätzer konnte deutlich weniger Personen Parameter schätzen, als der bedinge Maximum-Likelihood Schätzer. 
+
+Die Ergebnisse der Test befinden sich in den Darstellungen \ref{fig:GOFP} und die wichtigesten Test Parameter in Tabelle \ref{tab:GOFP}.
+   \begin{table}[htbp]
+     \centering
+   \begin{tabular}{ccccccccccc}
+   \toprule
+    \multicolumn{3}{c}{201 vs 301} &&  \multicolumn{3}{c}{201 vs 305}&&  \multicolumn{3}{c}{301 vs 305}\\ 
+    p-Wert & ks & n && p-Wert & ks & n && p-Wert & ks & n \\ 
+   \midrule
+     2e-3 & 0.45 & 33&& 1e-6 & 0.62 & 37 && 1e-3 & 0.60 & 20  \\ 
+   
+   \bottomrule
+   \end{tabular} 
+     \caption{Resultate des Kolmogorow-Smirnow-Test für die Übereinstimmung der Personen-Parameter zwischen den drei Tests. Wobei ks die Test-Statistik des Kolmogorow-Smirnow-Test ist. Mit $n$ wird die Anzahl an Personenparametern angegeben, welche für den Test verwendet werden konnten. }
+     \label{tab:GOFP}
+   \end{table}
+   
+
+   
+ \begin{figure}[htp]
+ \centering
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/GOF201301Pers.png}
+   \caption{Vergleich der Personen-Parameter $\theta_i$ zwischen Test 201 und 301.}
+   \label{fig:GOF201301P}
+ \end{subfigure}
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/GOF201305Pers.png}
+   \caption{Vergleich der Personen-Parameter $\theta_i$ zwischen Test 201 und 305.}
+   \label{fig:GOF201305P}
+ \end{subfigure}
+
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=1.0\linewidth]{graphics/GOF301305Pers.png}
+    \caption{Vergleich der Personen-Parameter $\theta_i$ zwischen Test 301 und 305.}
+    \label{fig:GOF301305P}
+  \end{subfigure}
+ 
+ \caption{Vergleich der Personenparameter für die drei Tests. Zusätzlich sind der P-Wert des Kolmogorow-Smirnow-Test und die Test-Statistik $ks$ angegeben.}
+ \label{fig:GOFP}
+ \end{figure}
+ 
+\github{http://git.io/FVjL}
+\clearpage 
+\subsection{Zusammenhang Rasch Modell und Fragebogen}
+
+Hierfür wurde wieder das erste Rasch Modell verwendet, bei dem die Qualitätsstandards 1 bis 3 als Items verwendet wurden und pro Person nur eine Personen-Fähigkeit geschätzt wurde.
+Die so geschätzten Personen-Fähigkeiten wurden mit den Ergebnissen des Fragebogens korreliert. Die Resultate befinden sich in den Darstellungen  und die Testergebnisse nochmals zusammengefasst in Tabelle.
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{ccccccccccc}
+\toprule
+   \multicolumn{2}{c}{Note Mathe} &&  \multicolumn{2}{c}{Note NatW.}&&  \multicolumn{2}{c}{SESSKO}&&  \multicolumn{2}{c}{Selbskonzept Schulversuche}\\ 
+   p-Wert & $\rho$ && p-Wert & $\rho$  && p-Wert & $\rho$&& p-Wert & $\rho$\\ 
+\midrule
+   0.16 & 0.17 && 0.95 & 0.0 && 0.46 & 0.09 && 0.04 & 0.23    \\ 
+
+\bottomrule
+\end{tabular} 
+  \caption{Spearmans $\rho$ und p-Werte für die Korrelation zwischen den unbedingten Niveaus (uLev) und den bedingten Niveaus (kLev) zwischen den einzelnen Tests.  }
+  \label{tab:CorNiveau}
+\end{table}
+
+ \begin{figure}[htp]
+ \centering
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/corPersonenMathe.png}
+   \caption{Korrelation der Personen-Fähigkeit $\theta$ mit der Note in Mathe.}
+   \label{fig:corPersonenMathe}
+ \end{subfigure}
+ \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/corPersonenNatw.png}
+   \caption{Korrelation der Personen-Fähigkeit $\theta$ mit der Note in den Naturwissenschaften.}
+   \label{fig:corPersonenNatW}
+ \end{subfigure}
+  \end{figure}
+  \begin{figure}[htbp]
+  \ContinuedFloat % continue from previous page
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+   \includegraphics[width=1.0\linewidth]{graphics/corPersonenSESSKO.png}
+   \caption{Korrelation der Personen-Fähigkeit $\theta$ mit dem absoluten Schulischem Selbstkonzept nach SESSKO \citep{Schone2002}.}
+   \label{fig:corPersonenSESSKO}
+  \end{subfigure}
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=1.0\linewidth]{graphics/corPersonenSelbskonzept.png}
+    \caption{Korrelation der Personen-Fähigkeit $\theta$ mit dem Selbstkonzept bei Schulversuchen.}
+    \label{fig:corPersonenSelbskonzept}
+  \end{subfigure}
+ \caption{Korrelation zwischen der Personen-Fähigkeit $\theta$ und verschiedenen per Fragebogen erhobenen Daten. Der Durchmesser der Punkte ist ein Mass für die Anzahl an Datenpunkten, welche an dieser Position liegen. Die blaue Gerade ist die lineare Regression der zugrunde liegenden Daten, der dunkel graue Bereich stellt das Vertrauensintervall (95\%) der linearen Regression dar. Zusätzlich sind noch Spearmans $rho$ und der p-Wert des Signifikanztests angegeben.}
+ \label{fig:corPersonen}
+ \end{figure}
+ \github{http://git.io/FwCx}
+ 
