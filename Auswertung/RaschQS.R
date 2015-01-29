@@ -1,5 +1,6 @@
-
 library(eRm)
+library(ggplot2)
+library(EnvStats)
 
 data <- read.csv(file="./CodierungNeu3.csv", head=TRUE, sep=",")
 raschDataQ <- subset(data, select = c(M201_Q1  , M201_Q2  , M201_Q3,M301_Q1  , M301_Q2  , M301_Q3  ,M305_Q1  , M305_Q2  , M305_Q3     ))
@@ -25,26 +26,29 @@ dev.off()
 plotICC(result, ask=F, empICC=list("raw"), empCI=list(lty="solid"))
 
 
-plotINFO(result)
 png('PersonItemMap.png')
 plotPImap(result)
 dev.off()
 
-plotPWmap(result)
-plotICC(result)
 
 
 
 
+png('GOF201301.png')
+gofobj <- gofTest(result$betapar[1:3], result$betapar[4:6])
+plot(gofobj, plot.type="Q-Q", main="", ylab = expression(beta ~ "Test 201"), xlab = expression(beta ~ "Test 301"), pch=19)
+dev.off()
+png('GOF201305.png')
 
-pp <- person.parameter(result)
-plot(pp)
-summary(pp)
 
+gofobj2 <- gofTest(result$betapar[1:3], result$betapar[7:9])
+plot(gofobj2, plot.type="Q-Q", main="", ylab = expression(beta ~ "Test 201"), xlab = expression(beta ~ "Test 305"), pch=19)
+dev.off()
+png('GOF301305.png')
+gofobj3 <- gofTest(result$betapar[4:6], result$betapar[7:9])
+plot(gofobj3, plot.type="Q-Q", main="", ylab = expression(beta ~ "Test 301"), xlab = expression(beta ~ "Test 305"), pch=19)
+dev.off()
 
-
-
-itemfit(pp)
-personfit(pp)
-pmat(pp)
-
+gofobj
+gofobj2
+gofobj3
