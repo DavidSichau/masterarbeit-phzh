@@ -207,9 +207,9 @@ Die Ergebnisse wurden grafisch als Streudiagramme dargestellt (siehe \ref{fig:co
  \cmidrule{3-4}  \cmidrule{6-7}
  Test && p-Wert & $\rho$ && p-Wert & $\rho$  \\ 
 \midrule
- 201 vs. 301 &&   0.02 & 0.26 && 0.20 & 0.08    \\ 
- 201 vs. 305 &&   0.44 & 1e-4 && 0.33 & 4e-3      \\
- 301 vs. 305 &&   0.36 & 2e-3 && 0.01 & 0.89    \\
+ 201 vs. 301 &&   0.02 & 0.26 && 0.08 & 0.20    \\ 
+ 201 vs. 305 &&   1e-4 & 0.44 && 4e-3 & 0.33      \\
+ 301 vs. 305 &&   2e-3 & 0.36 && 0.89 & 0.01    \\
 \bottomrule
 \end{tabular} 
   \caption{Spearmans $\rho$ und p-Werte für die Korrelation zwischen den unbedingten Niveaus (uLev) und den bedingten Niveaus (kLev) zwischen den einzelnen Tests.  }
@@ -278,8 +278,8 @@ Wobei i=1,…,n die Zählvariable für eine Person ist und j=1,…,m die Zählva
 
 Bei der Item-Response-Theorie (Probabilistische Test-Methoden) wird angenommen , dass das Ergebnis einer Person nicht deterministisch ist, sondern zufällig sein kann. Daher soll mit dem Rasch Modell die Lösungswahrscheinlichkeit jeder Aufgabe $U_{ij}$ berechnet werden. Diese Lösungswahrscheinlichkeit hängt sowohl von der Fähigkeit der Person $\theta_j$ als auch von der Schwierigkeit der Aufgabe $\beta_i$ ab. Diese Lösungswahrscheinlichkeiten werden basierend auf den Testergebnissen $u_{ij}$ geschätzt.
 
-\subsection{Parameterschätzung}
-Für die Parameterschätzung gibt es verschieden Ansätze. Da die beste Methode von den Daten abhängig ist wurde in einem ersten Schritt das Rasch-Modell sowohl mit der bedingte Maximum-Likelihood-Schätzung, als auch mit der marginal Maximum-Likelihood-Schätzung getestet und die Resultate wurden verglichen. 
+\subsection{Parameter-Schätzung}
+Für die Parameter-Schätzung gibt es verschieden Ansätze. Da die beste Methode von den Daten abhängig ist wurde in einem ersten Schritt das Rasch-Modell sowohl mit der bedingte Maximum-Likelihood-Schätzung, als auch mit der marginal Maximum-Likelihood-Schätzung getestet und die Resultate wurden verglichen. 
 
 Bei der bedingten Maximum-Likelihood-Schätzung wird ein zweistufiges Vorgehen gewählt. Zuerst werden die Aufgaben-Parameter geschätzt ohne die Personen Parameter zu beachten. Erst in einem zweiten Schritt werden die Personen-Parameter geschätzt. Ein Problem dieser Methodik ist, dass Personenfertigkeiten von Personen, welche keine oder alle Aufgaben gelöst haben nicht geschätzt werden können \citep{Mair2007}.
 
@@ -340,7 +340,7 @@ Zusätzlich wurden die Qualitätsstandards mit dem Wald-Test überprüft. Damit 
 
 \github{http://git.io/FE3m}
 
-\subsection{Unterschied in den Qualitätsstandards}
+\subsection{Unterschied in den Schwierigkeiten der Qualitätsstandards}
 
 Nachdem das Modell kontrolliert wurde soll nun überprüft werden ob es einen Unterschied in den Qualitätsstandards zwischen den einzelnen Test gibt.
 
@@ -549,7 +549,7 @@ Die so geschätzten Personen-Fähigkeiten wurden mit den Ergebnissen des Fragebo
  \end{figure}
  \github{http://git.io/FwCx}
  
- 
+ \clearpage
  \section{Videoanalyse}
  
  Insgesamt waren vier Stunden Videomaterial angefallen. Es wurde wie bereits erwähnt nur in einer Halbklasse eine Videoaufnahme durchgeführt. Aufgrund der Position der Videokamera konnten nur die Aktionen von je zwei Schülern und Schülerinnen analysiert werden. So konnten von 8 Schülerinnen und Schülern die Aktionen per Video analysiert werden.

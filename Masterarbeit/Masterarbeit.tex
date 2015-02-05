@@ -1,4 +1,4 @@
-\documentclass[12pt,oneside,  DIV13]{scrbook}
+\documentclass[12pt,twoside]{scrbook}
 
 % deutsche Silbentrennung
 
@@ -41,8 +41,9 @@
 	leftmargin =+5cm,
 	rightmargin=+5cm,
    	roundcorner=5pt,
-   	backgroundcolor=gray!20,
-   	nobreak=true
+   	backgroundcolor=gray!5,
+   	nobreak=true,
+   	usetwoside=false
 }
 
 \newcommand{\github}[1] {
@@ -50,7 +51,7 @@
   \begin{center}
   Code erhältlich auf:\\
   \href{#1}{
-    \includegraphics[width=0.4\textwidth]{graphics/GitHubLogo.png}
+    \includegraphics[width=0.3\textwidth]{graphics/GitHubLogo.png}
     }\\
     \vspace{-0.3cm}
     {\tiny \href{#1}{#1}}
@@ -67,11 +68,10 @@
 \begin{titlepage}
 	\vspace*{2cm}
 	\begin{center}
-		{\LARGE Super Title \vspace*{2cm}\\ Master Thesis\\}
-		\vspace*{2cm}\large David-Matthias Sichau \\
-		\vspace*{1.5cm} Supervisors:\\ Pitt Hild, \\
-		\vspace*{1cm} GroupName\\
-		\vspace*{2cm}{\large 24. September 2014, Zürich}\\
+		{\LARGE Super Title \vspace*{2cm}\\ Masterarbeit an der Pädagogischen Hochschule Zürich\vspace*{1cm}\\Masterstudiengang Fachdidaktik\\}
+		\vspace*{2cm}{\normalsize vorgelegt von:}\\ \large David-Matthias Sichau \\
+		\vspace*{1.5cm} {\normalsize  eingereicht bei:}\\ \large Pitt Hild, \\
+		\vspace*{2cm}{\large 05. Februar 2015, Zürich}\\
 	\end{center}
 \end{titlepage}
 
@@ -89,6 +89,20 @@
 
 
 Toller Abstrakt
+\section*{Urheberschaftsbestätigung}
+
+Hiermit erkläre ich, dass die vorliegende Arbeit von mir eigenständig verfasst wurde und keine anderen als die von mir angegebenen Hilfsmittel verwendet wurden. Alle Stellen der Arbeit, die anderen Werken dem Wortlaut oder dem Sinn nach entnommen wurden, sind mit Angaben der Quellen als solche gekennzeichnet.
+
+Ich nehme zur Kenntnis, dass Arbeiten, die unter Beizug unerlaubter Hilfsmittel verfasst wurden und die fremde Textteile ohne entsprechenden Herkunftsnachweis enthalten, verfolgt und geahndet werden.
+\\
+\\Zürich den 05. Februar 2015
+
+
+\includegraphics[width=0.2\linewidth]{./graphics/UnterschriftDavid.pdf}\\
+David Sichau
+
+
+
 
 \mainmatter
 
@@ -107,9 +121,9 @@ Toller Abstrakt
 \chapter{Diskussion}
 \input{content/diskussion}
 \chapter{Ausblick}
+\input{content/ausblick}
 
-\nocite{Gut2013a}
-\nocite{Metzger2013}
+
 \appendix 
 
 

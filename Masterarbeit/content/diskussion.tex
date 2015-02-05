@@ -45,3 +45,73 @@ Es dürfen daher alle Datensätze kombiniert werden, da das Erreichen eines Qual
 \section{Ist das Abschneiden in den Tests unterschiedlich}
 
 Nachdem gezeigt wurde, dass der ganze Datensatz insgesamt analysiert werden kann, wurde versucht die Forschungsfrage zu beantworten. Dafür ist es notwendig festzustellen, ob das Erreichen der Qualitätsstufen zwischen den unterschiedlichen Tests signifikant unterschiedlich ist.
+
+Hierbei gibt es unterschiedliche Ergebnisse, wie in Tabelle \ref{tab:CorNiveau} ersichtlich ist. So ist die Korrelation zwischen den unbedingten Niveaus sind zwischen allen Tests signifikant. Das Spearmans $\rho$ liegt jeweils im leicht positiven Bereich, was auf eine leicht positive Korrelation hinweist. Bei dem bedingten Niveau ist nur der Test zwischen Test 201 und 305 signifikant.
+
+Ein Grund für diese unterschiedlichen Resultate liegt vermutlich darin, das beim bedingten Niveau nur sehr wenig hohe Werte erreicht werden (siehe Tabelle \ref{tab:Niveau}). Daher kommt es zu einer geringen Datenlage bei Niveaus über 2, dies kann man auch sehr gut in den Darstellungen \ref{fig:corLev} sehen. Dies führt zu Problemen bei der Berechnung des Korrelationstestes für bedingte Niveaus, da nur sehr wenige Datenpunkte im Bereich über 2 verfügbar sind, an denen eine Verankerung stattfinden könnte. Bei besseren Schülerinnen und Schülern bei denen öfter ein höheres Niveau erreicht würde, wären diese Probleme nicht so fatal und man würde vermutlich bei beiden Niveaus eine Korrelation feststellen können.
+
+Aufgrund der geringen Datenlage bei den bedingten Niveaus, wird der Fokus in der weiteren Arbeit auf die unbedingten Niveaus gesetzt. Aufgrund der Korrelationen zwischen diesen kann davon ausgegangen werden, dass das Erreichen eines unbedingten Niveaus in einem Test mit dem unbedingten Niveau in einem anderen Test signifikant leicht korreliert. Dies ist ein erster Hinweis darauf, dass das Erreichen eines Niveaus nicht abhängig ist in welchem Test dies erreicht wurde. Sondern rein von der Kompetenz des skalenbasierten Messens. 
+
+\section{Rasch-Analyse}
+
+Nach sind in der klassischen Testtheorie erste Hinweise auf die Beantwortung der Forschungsfrage gezeigt haben, wurde zusätzlich die probabilistische Testtheorie verwendet. Ein Grund diese Theorie zu verwenden ist, dass das Abgeben einer korrekten Antwort ein Zufallsprozess ist und nicht deterministisch. Aufgrund der zugrunde liegenden Daten wurde das dichotome Rasch Modell verwendet. Für das Modell wurden nur die unbedingten Qualitätsstandards verwendet, die bedingten Qualitätsstandards würden die Annahme des Rasch Modells, dass alle Items unabhängig voneinander sind, verletzt.
+
+\subsection{Parameter-Schätzung}
+
+Ein grosses Problem bei der Rasch-Analyse ist die Parameter-Schätzung. Das grösste Problem dabei ist, dass es im Moment in der Literatur nur zwei gängige Parameterschätzer gibt, welche im Detail analysiert wurden \citep{Fischer1995,Rost2004, Strobl2012}. Wie bereits geschrieben machen diese beiden Parameterschätzer Annahmen über die Zugrunde liegenden Daten. Bei den vorliegenden Daten kann insbesondere die Annahme über eine bestimmte Verteilung (der Einfachheit halber wird meistens eine Normalverteilung angenommen \citep{Rost2004}) der Personenfähigkeiten aufgrund der Zugrundliegeenden Daten nicht angenommen werden.
+
+Mit beiden Parameterschätzern können zwar die Aufgaben Schwierigkeiten $\beta$ übereinstimmen geschätzt werden (siehe Darstellung \ref{fig:RaschVergleich}). Nach \citet{Rost2004} ist diese Schätzung jedoch deutlich unkritischer, wie die der Personen-Parameter. Bei den Personen-Parametern $\theta$ gibt es jedoch Unterschiede zwischen beiden Schätzen. Bei der bedingen Maximum-Likelihood-Schätzung können alle Personen-Parameter ohne Extrapolation berechnet werden. Dies ist bei der marginal Maximum-Likelihood-Schätzung nicht der Fall. Der Grund dafür liegt in der Annahme einer Normalverteilung der Personen-Parameter die der marginal Maximum-Likelihood-Schätzung zugrunde liegt. Bei grösseren Datensätzen mag diese Annahme gerechtfertigt sein, bei dem hier vorliegenden Datensatz ist dieser Schätzer jedoch nicht geeignet. Es wäre zwar prinzipiell möglich eine andere Verteilung als die Normalverteilung für die Personen-Parameter zu verwenden. Dafür müsste aber eine eigene Implementierung des Rasch-Modells vorgenommen werden, was den Rahmen dieser Arbeit sprengen würde.
+
+Aufgrund diesem Vergleich der Parameter-Schätzungen wurde für alle weiteren Rasch Modelle der bedingen Maximum-Likelihood-Schätzer verwendet. Dessen Annahmen, dass jeder Schüler oder Schülerin mindestens ein Item richtig oder falsch beantwortet haben müssen, war jedoch bei der Aufteilung in kleinere Rasch-Modelle ein Problem. Daher sollten insbesondere für kleine Datensätze bessere Schätzer entwickelt werden, welche weniger Annahmen über die Zugrundliegeenden Daten machen. Eine Möglichkeit wäre ein Bootstrapping Algorithmus, welcher die Verteilung der Personen-Parameter aus den vorliegenden Daten selbst abschätzt und die Verteilung dann in den marginal Maximum-Likelihood Schätzer einsetzt.
+
+\subsection{Modellkontrolle}
+
+Nachdem der beste Parameter-Schätzer identifiziert wurde, musste das Rasch Modell jedoch noch verifiziert werden. Dafür wurde das Rasch-Modell basierend auf dem Mittelwert der Personen-Randsummen gesplittet. Aufgrund der Annahmen für das Rasch-Modell sollten dann keine signifikanten Unterschiede zwischen den beiden neuen Modellen existieren. Dies wurde vom Andersens Likelihood-Quotienten Test bestätigt, nach dem die Qualitätsstufen 4 und 5 entfernt wurden. Das Problem mit diesen beiden Qualitätsstufen ist, dass für die untersuchte Personen-Gruppe diese Standards sehr schwierig waren und sie daher kaum beantwortet wurden (siehe Tabelle \ref{tab:QS}). Aufgrund der Test Ergebnisse kann das Ausschliessen dieser Qualitätsstufen bestätigt werden, da dann ein valides Rasch-Modell vorliegt.
+
+Zusätzlich wurden alle Qualitätsstandards noch überprüft, sowohl grafisch (siehe Darstellung \ref{fig:RaschKontrolle}), als auch mit dem Wald-Test (siehe Tabelle \ref{tab:WaldTest}). Es gab dabei kein Qualitätsstandard, welcher als ungeeignet aus dem Modell ausgeschlossen werden müsste, da er sich signifikant in den beiden Modellen unterschiedet.
+
+Diese Resultate zeigen, dass das verwendete Rasch-Modell mit den Qualitätsstandards 1-3 valide ist. Dieses Resultat ist wichtig, da ansonsten die mit diesem Modell gewonnenen Parameter auf einer falschen Modell-Annahme beruhen würden.
+
+\subsection{Unterschied in den Schwierigkeiten der Qualitätsstandards}
+
+Die Schwierigkeit eines Qualitätsstandards sollte nicht davon abhängig sein, in welchem Test dieser Qualitätsstandard erreicht wurde. Dies wurde versucht mit Hilfe des Rasch-Modells zu verifizieren. Dazu wurden die \textit{item characteristic curves} (ICC) gezeichnet, siehe Darstellung \ref{fig:corLevRasch}. Diese Darstellung lassen eine qualitative Überprüfung der Schwierigkeiten dar. Man sieht das bei Qualitätsstandard 1 und 3 die beiden Test 201 und 301 sehr ähnlich sind. Bei Test 305 sind die Qualitätsstandards meistens deutlich leichter in der Schwierigkeit. Dies liegt höchstwahrscheinlich daran, dass dieser Test im Vergleich zu den anderen beiden Test leichter ist \citep{Sichau2015}. Dies sieht man auch in der Darstellung \ref{fig:PersonItemMapQ}.
+
+Zusätzlich zu der qualitativen Überprüfung wurde noch ein Kolmogorow-Smirnow-Test durchgeführt, um festzustellen ob die Unterschiede in den Aufgaben-Parametern (siehe Tabelle \ref{tab:betaQ}) signifikant sind. Die Testergebnisse in Tabelle \ref{tab:corTestQ} zeigen, dass es keine signifikanten Unterschiede zwischen diesen Werten gibt. Wichtig ist dabei jedoch, dass diese Tests eine sehr geringe Power haben, da der Datensatz nur die Grösse von 3 hatte. Diese geringe Power zeigt sich auch in der Darstellung \ref{fig:corTestQ}.
+
+
+Durch die Kombination der qualitativen und quantitativen Resultaten kann jedoch die Aussage gestützt werden, dass es keine signifikanten Unterschiede in der Schwierigkeiten der Qualitätsstandards gibt. Dies ist ein weiterer Hinweis darauf, dass das Erreichen der Qualitätsstandards 1-3 nicht davon abhängig ist, welcher Test durchgeführt wurde. 
+
+\subsection{Unterschied in den latenten Personen-Fähigkeiten}
+
+Nachdem es klar ist, dass die Aufgaben-Parameter sehr ähnlich sind wurden die Personen-Parameter analysiert. Hierfür wurde das Rasch-Modell aufteilt und für jeden Test ein eigenes Rasch-Modell erstellt. Hierbei gibt es nun massive Probleme mit der Parameter-Schätzung, da nun die Wahrscheinlichkeit, dass ein Schüler keinen der drei Qualitätsstandards oder alle erreicht hat, signifikant höher ist. Daher konnten viele Personen-Parameter nicht geschätzt werden.
+
+Diese Probleme mit der Parameter-Schätzung führten auch dazu, dass das Modell nicht validiert werden konnten. Die gewonnenen Personen-Parameter basieren daher auf einem nicht validierten Modell und müssten daher mit Vorsicht interpretiert werden. Diesmal wurde daher untersucht, ob sich die Personen-Fähigkeiten zwischen den drei Rasch Modellen unterscheiden. In Tabelle \ref{tab:GOFP} und Darstellung \ref{fig:GOFP} sind die Resultate dieses Testes dargestellt. Es kann daher davon ausgegangen werden, dass die Personen-Fähigkeiten zwischen den drei Tests nicht signifikant korrelieren.
+
+Diese Resultate sind ein Gegenindiz zu den bisher vorliegenden Resultaten, da die Personen-Fähigkeit nicht von den durchgeführten Tests abhängen sollten. Aufgrund der Datengrundlage und dem darauf basierenden Rasch-Modell sollten diese Ergebnisse jedoch nicht überbewertet werden, insbesondere da das Rasch-Modell nicht validiert werden konnte. Auch sieht man in Tabelle \ref{tab:GOFP}, dass meistens nur ein kleiner Teil der Personen-Parameter verglichen worden wurde, da der Schätzer nur für einen kleinen Teil der Personen fähig war den Personen-Parameter $\theta$ zu berechnen. Diese Ergebnisse beruhen daher Grossteils auf Problemen mit dem Parameter-Schätzer. Auch der marginale Maximum-Likelihood Schätzer hatte massive Probleme mit dem Datensatz und war noch schlechter, daher wurden dessen Ergebnisse nicht präsentiert.
+
+Aufgrund dieser Probleme sollten diese Gegenindizien nicht überinterpretiert werden, da sie auf einer sehr schlechten Datengrundlage basieren. Dies zeigt jedoch, dass bessere Parameter-Schätzer notwendig sind, welche auch mit solchen Datensätzen umgehen können.
+
+\subsection{Zusammenhang Rasch Modell und Fragebogen}
+
+Das erste Rasch-Modell, bei dem alle drei Test kombiniert wurden, wurde verwendet um die latente Personen-Fähigkeit mit Resultaten des Fragebogens zu vergleichen. In Tabelle \ref{tab:CorPersonRasch} sind die Ergebnisse der Korrelations-Test dargestellt. Es gibt nur einen signifikanten Zusammenhand zwischen dem Schulversuch Selbstkonzept. 
+
+Dieses Ergebnis ist nicht überraschend, da in der Notengebung experimentellen hand-ons Test eher eine untergeordnete Rolle spielen. Auch das SESSKO Selbstkonzept \citep{Schone2002} ist vermutlich zu generell und korreliert daher nicht mit den Personen-Fähigkeiten des Rasch-Modells. Das letzte Selbstkonzept hingegen zielt sehr genau auf das Selbstkonzept bei Schulversuchen ab, welche sehr identisch zu experimentellen hand-ons Test sind. Daher ist diese Korrelation zu erwarten. Um diese Skala jedoch zu verbessern, müsste diese noch im grösseren Rahmen validiert werden. Vor allem ist im Moment noch keine Normalverteilung der Daten gewährleistet.
+
+\section{Videoanalyse}
+
+In einem letzten Schritt wurden noch die Videos analysiert. Die dabei entwickelten Merkmale wurden mit den Qualitätsstandards korreliert. Wie in Tabelle \ref{tab:CorVideoQ} und Darstellung \ref{fig:corVideoQ} ersichtlich gibt es keinen Zusammenhang zwischen den im Video kodierten Merkmalen und den Qualitätsstandards, auf denen die Merkmale beruhen. Diese Ergebnisse sind zuerst enttäuschend, da die Merkmale eigentlich die Qualitätsstandards widerspiegeln sollten. Mit Beobachtungen, welche jedoch während der Test Durchführung gemacht wurden lassen sich diese Ergebnisse jedoch erklären. Viele Schülerinnen und Schüler waren während der Test Durchführung sehr auf die experimentelle Seite fokussiert und haben insgesamt sehr wenig auf den Datenbögen ausgefüllt. Dies zeigt sich auch im insgesamt eher schlechtem Abschneiden der Schülerinnen und Schüler (siehe Tabelle \ref{tab:Niveau}). Daher widerspiegeln die Qualitätsstandards nur den Teil des Experimentes wieder, welche die Schülerinnen und Schüler dokumentiert haben. 
+
+Diese Resultate zeigen jedoch klar, dass die Kompetenz des skalenbaiserenden Messens auch der Aspekt der Dokumentation eine entscheidende Rolle spielt. Dies widerspricht sich jedoch nicht, da zu einer experimentellen Kompetenz die Fähigkeit zu Dokumentieren sehr wichtig ist. Für Schülerinnen und Schüler jedoch, welche sprachliche Schwächen haben, könnte der Einsatz von Videoanalysen hilfreich sein. Auch bei niedrigeren Schulstufen, wäre der Einsatz von Videoanalysen angebracht. Ein Nachteil ist jedoch der hohe Aufwand, welcher für die Kodierung der Videos anfällt. 
+
+Ein weiteres Problem ist die Interpretierbarkeit der Daten. So ist es sehr schwierig aus der Darstellung \ref{fig:Messungen} gute Schlüsse zu ziehen. Diese Daten sind nur qualitativ analysierbar. Solange aber dieser Datensatz nicht grösser ist, sollten aus diesen Daten auch keine qualitativen Schlüsse gezogen werden.
+
+\section{Zusammenfassung}
+
+Abschliessend lässt sich sagen, dass sowohl mit der klassischen als auch mit der probabilistische Testtheorie die Forschungsfrage beantwortbar ist. Mit beiden Theorien konnten starke Hinweise darauf gefunden werden, dass bei dem vorliegenden Datensatz die Kompetenz des skalenbasierenden Messens unabhängig des fachlichen oder inhaltlichen Kontextes ist. Es gibt zwar auch Gegenanzeigen gegen dieses Resultat, bei diesen ist aber oft die Datengrundlage sehr schlecht, im Vergleich zu den unterstützenden Hinweisen. Daher kann die Forschungsfrage mit der durchgeführten Methode beantwortet werden. Bevor aber generelle Schlüsse gezogen werden sollten, müsste die Untersuchungsgruppe massiv vergrössert werden. 
+
+Das Resultat dieser Arbeit ist daher, dass:
+\begin{quote}
+ Die Kompetenz des skalenbasierten Messens in der vorliegenden Untersuchungsgruppe unabhängig des fachlichen oder inhaltlichen Kontextes ist.
+\end{quote}
+
+
