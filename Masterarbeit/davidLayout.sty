@@ -1,8 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{davidLayout}
 
-% Packages used by this style file
-
+% Korrektes Kodieren des in und outputs
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
 
@@ -15,8 +15,9 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
 
-
-
+%Deutsche Silbentrennung
+\RequirePackage{hyphsubst}%
+\HyphSubstIfExists{ngerman-x-latest}{\HyphSubstLet{ngerman}{ngerman-x-latest}}{} 
 
 \usepackage{graphicx}
 % make nice subgraphs

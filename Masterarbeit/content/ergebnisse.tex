@@ -1,6 +1,6 @@
 \section{Kodierung}
 
-Wie bereits geschrieben wurde die Erstkodierung von David Sichau durchgeführt. Es wurden eine Zweitkodierung von  15 \% zufällig ausgewählten (per Random Generator) Auswertungsbögen von Pitt Hild  durchgeführt. Es wurden dabei die gleichen Kodierschemata verwendet, welche sich im Anhang der Arbeit befinden. %TODO Referenz zu Koderischemata
+Wie bereits geschrieben wurde die Erstkodierung von David Sichau durchgeführt. Es wurden eine Zweitkodierung von  15 \% zufällig ausgewählten (per Random Generator) Auswertungsbögen von Pitt Hild  durchgeführt. Es wurden dabei die gleichen Kodierschemata verwendet, welche sich im Anhang der Arbeit befinden (siehe Sektion \ref{sec:Kodierung} im Anhang). 
 
 \subsection{Items}
 Es gab insgesamt elf Items welche nach dem Kodierschemata kodiert wurden.
@@ -39,7 +39,7 @@ Item  & $p_0$ & $\kappa$ &&  $p_0$ & $\kappa$ &&  $p_0$ & $\kappa$\\
 \subsection{Qualitätsstandards}
 Aus den elf Items wurden fünf Qualitätsstandards entwickelt \citep{Hild2014a}. Es gibt bedingte und unbedingte Qualitätsstandards. Bei den bedingten Qualitätsstandards ist für das erreichen notwendig, das sowohl die Bedingung erfüllt ist, als auch dass der vorgängige Qualitätsstandard erfüllt ist. Die unbedingten Qualitätsstandards werden in dieser Arbeit mit Q1 bis Q5 bezeichnet. Die bedingten Qualitätsstandards werden mit QS1 bis QS5 bezeichnet.
 \subsubsection*{Qualitätsstandard 1}
-Im Qualitätsstandard 1 geht es um das korrekte und präzise messen. Dieser Qualitätsstan\-dard wird nur erreicht wenn Item 1.1 (Richtige Tendenz des Resultates) und Item 1.2 (Ist das Resultat vollständig und korrekt) zusammen mindestens 1 ergeben.
+Im Qualitätsstandard 1 geht es um das korrekte und präzise messen. Dieser Qualitätsstandard wird nur erreicht wenn Item 1.1 (Richtige Tendenz des Resultates) und Item 1.2 (Ist das Resultat vollständig und korrekt) zusammen mindestens 1 ergeben.
 
 
 \subsubsection*{Qualitätsstandard 2}
@@ -279,22 +279,22 @@ Wobei i=1,…,n die Zählvariable für eine Person ist und j=1,…,m die Zählva
 Bei der Item-Response-Theorie (Probabilistische Test-Methoden) wird angenommen , dass das Ergebnis einer Person nicht deterministisch ist, sondern zufällig sein kann. Daher soll mit dem Rasch Modell die Lösungswahrscheinlichkeit jeder Aufgabe $U_{ij}$ berechnet werden. Diese Lösungswahrscheinlichkeit hängt sowohl von der Fähigkeit der Person $\theta_j$ als auch von der Schwierigkeit der Aufgabe $\beta_i$ ab. Diese Lösungswahrscheinlichkeiten werden basierend auf den Testergebnissen $u_{ij}$ geschätzt.
 
 \subsection{Parameter-Schätzung}
-Für die Parameter-Schätzung gibt es verschieden Ansätze. Da die beste Methode von den Daten abhängig ist wurde in einem ersten Schritt das Rasch-Modell sowohl mit der bedingte Maximum-Likelihood-Schätzung, als auch mit der marginal Maximum-Likelihood-Schätzung getestet und die Resultate wurden verglichen. 
+Für die Parameter-Schätzung gibt es verschieden Ansätze. Da die beste Methode von den Daten abhängig ist wurde in einem ersten Schritt das Rasch-Modell sowohl mit der bedingte Maximum"=Likelihood"=Schätzung, als auch mit der marginal Maximum"=Likelihood"=Schätzung getestet und die Resultate wurden verglichen. 
 
-Bei der bedingten Maximum-Likelihood-Schätzung wird ein zweistufiges Vorgehen gewählt. Zuerst werden die Aufgaben-Parameter geschätzt ohne die Personen Parameter zu beachten. Erst in einem zweiten Schritt werden die Personen-Parameter geschätzt. Ein Problem dieser Methodik ist, dass Personenfertigkeiten von Personen, welche keine oder alle Aufgaben gelöst haben nicht geschätzt werden können \citep{Mair2007}.
+Bei der bedingten Maximum"=Likelihood"=Schätzung wird ein zweistufiges Vorgehen gewählt. Zuerst werden die Aufgaben-Parameter geschätzt ohne die Personen Parameter zu beachten. Erst in einem zweiten Schritt werden die Personen-Parameter geschätzt. Ein Problem dieser Methodik ist, dass Personenfertigkeiten von Personen, welche keine oder alle Aufgaben gelöst haben nicht geschätzt werden können \citep{Mair2007}.
 
-In der marginalen Maximum-Likelihood-Schätzung wird angenommen, dass für die Personenfähigkeiten in der Stichprobe eine Normalverteilung vorliegt. Diese Annahme ist insbesondere dann problematisch, wenn nur eine Stichprobe der Gesamtbevölkerung verwendet wird \citep{Rizopoulos2006}.
+In der marginalen Maximum"=Likelihood"=Schätzung wird angenommen, dass für die Personenfähigkeiten in der Stichprobe eine Normalverteilung vorliegt. Diese Annahme ist insbesondere dann problematisch, wenn nur eine Stichprobe der Gesamtbevölkerung verwendet wird \citep{Rizopoulos2006}.
 
 Da beide Schätzungen für den vorliegenden Datensatz problematisch sein könnten, wurde das Rasch-Modell mit beiden Ansätzen durchgeführt und die Resultate verglichen. Das Ziel war dabei, den besseren Ansatz für den vorliegenden Datensatz zu finden, um mit diesem Ansatz die weiteren Analysen durchzuführen. Als Datensatz für diesen Vergleich wurden die 15 unbedingten Qualitätsstandards verwendet. Die Resultate sind in Abbildung \ref{fig:RaschVergleich} ersichtlich. Es gibt für diesen Datensatz keinerlei Unterschied in der Schätzung der Schwierigkeitsgrad der einzelnen Qualitätsstandards. 
 
-Bei der Schätzung der Personen-Parametern konnte die bedingten Maximum-Likelihood-Schätzung alle 72 Personen-Fähigkeiten ohne Extrapolationen berechnen. Die marginalen Maximum-Likelihood-Schätzung konnte jedoch nur die Personen-Fähigkeiten von 64 Personen berechnen. Daher wird in der weiteren Arbeit für alle Rasch Modelle jeweils der bedingten Maximum-Likelihood-Schätzer verwendet.
+Bei der Schätzung der Personen-Parametern $\theta$ konnte die bedingte Maximum"=Likelihood"=Schätzung alle 72 Personen-Fähigkeiten ohne Extrapolationen berechnen. Die marginalen Maximum"=Likelihood"=Schätzung konnte jedoch nur die Personen"=Fähigkeiten von 64 Personen berechnen. Daher wird in der weiteren Arbeit für alle Rasch Modelle jeweils der bedingten Maximum-Likelihood-Schätzer verwendet.
 
 
 \begin{figure}[htbp]
 
 \centering
 \includegraphics[width=0.6\linewidth]{graphics/RaschVergleich.png}
-\caption{Vergleich des Rasch Modells mit der bedingten Maximum-Likelihood-Schätzung und der marginalen Maximum-Likelihood-Schätzung. Da alle Punkte auf einer Geraden liegen, gibt es keinen Unterschied zwischen den unterschiedlichen Schätzmethoden für den vorliegenden Datensatz der 15 unbedingten Qualitätsstandards.  }
+\caption{Vergleich des Rasch Modells mit der bedingten Maximum"=Likelihood"=Schätzung und der marginalen Maximum"=Likelihood"=Schätzung. Da alle Punkte auf einer Geraden liegen, gibt es keinen Unterschied zwischen den unterschiedlichen Schätzmethoden für den vorliegenden Datensatz der 15 unbedingten Qualitätsstandards.  }
 \label{fig:RaschVergleich}
 \end{figure}
 
