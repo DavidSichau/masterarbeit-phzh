@@ -1,0 +1,111 @@
+
+\documentclass[paper=a4, fontsize=12pt, parskip=half]{scrartcl} % A4 paper and 11pt font size
+
+
+\usepackage[ngerman]{babel} % German language/hyphenation
+
+\usepackage[utf8]{inputenc} 
+\usepackage{setspace}
+\onehalfspacing 
+%\usepackage{cite}
+
+\usepackage[
+	natbib,
+	bibencoding=utf8,
+	isbn=false,
+	backend=biber,
+	doi=false,
+	url=false,
+	authordate
+]{biblatex-chicago}  
+\DefineBibliographyStrings{german}{%
+  andothers = {et al.},
+}
+\addbibresource{../../../../library.bib}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{fancyhdr} % Custom headers and footers
+%\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\pagestyle{fancyplain}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+
+\chead{ \fancyplain{}{\rightmark} }
+
+\cfoot{ \fancyplain{}{\thepage} }
+
+
+
+\usepackage{csquotes}
+
+
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{PHZH} \\ [0.4cm] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.3cm] % Thin top horizontal rule
+\huge Konzept Masterarbeit \\ % The assignment title
+\horrule{2pt} \\[0.4cm] % Thick bottom horizontal rule
+}
+
+\author{David Sichau} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+
+
+\begin{document}
+
+\maketitle % Print the title
+
+\tableofcontents
+
+
+\section{Konzept}
+
+Im letzten Jahrzehnt fand eine Umorientierung des Bildungssystems hin zu einer Output-Orientierung statt. Dieser Wandel spiegelt sich auch in den neu entwickelten Bildungsstandards, in welchen die Kompetenzen der Schülerinnen und Schüler im Vordergrund stehen, welche diese nach dem Besuch des Bildungssystems erreicht haben sollen \citep{Oelkers2008}. Die Kompetenzen, welche die Schülerinnen und Schüler erreichen sollen, werden oft unabhängig von einem inhaltlichen oder fachlichen Kontext festgelegt (so z.B. bei HarmoS \citet{KonsotriumHarmoSNaturwissenschaften+2010}). Deshalb wird erwartet, dass die Kompetenzen generalisierbar sind und teilweise auf andere Situationen übertragen werden können \citep{Hartig2006}.
+
+Im Rahmen dieser Masterarbeit soll in einer Stichprobe von Schülern und Schülerinnen der 1. Klasse der Sekundarstufe A untersucht werden, inwiefern experimentelle Kompetenzen kontextabhängig sind. Dazu sollen experimentelle Hands-on Experimentieraufgaben zum Problemtyp "`skalenbasierten Messens"' des Projektes ExKoNawi der PH Zürich \citep{Gut2013a} verwendet werden. Insgesamt soll die Untersuchung an 4 Klassen der 1. Sek A durchgeführt werden. Jede dieser Klassen werden 3 experimentelle Hands-on Experimentiertests zum gleichen Problemtyp lösen müssen, wobei sich jedoch der Kontext, in welchen der Problemtyp eingebettet ist unterscheidet.
+
+\section{Fragestellungen}
+
+Die Fragestellung, welche in dieser Masterarbeit untersucht werden soll lautet:
+
+
+\begin{quote}
+Erfordern Diagnoseaufgaben zum gleichen Problemtyp "`skalenbasiertes Messen"' aber in unterschiedlichen Kontexten die gleichen experimentellen
+Kompetenzen bei Schülerinnen und Schülern der Sekundarstufe I?
+
+\end{quote}
+Diese Forschungsfrage soll mit Hilfe der Ergebnisse der hands-on Experimentieraufgaben und der probabilistischen Testmethode analysiert werden. Aufgrund der geringen Stichprobe kann jedoch nicht von einer Generalisierbarkeit der Resultate ausgegangen werden.
+
+
+
+
+
+\section{Bisher untersuchte Literatur}
+
+Bisher wurde nachfolgende Literatur untersucht. Die Literatur Recherche ist noch nicht abgeschlossen und daher wird im Rahmen der Arbeit noch zahlreiche weitere Literatur hinzukommen.
+
+
+
+\printbibliography[heading=none]
+
+
+
+
+
+\end{document}

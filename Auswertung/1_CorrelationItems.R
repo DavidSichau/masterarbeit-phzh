@@ -1,0 +1,43 @@
+library(corrgram)
+library(ggplot2)
+
+d <- read.csv(file="./CodierungNeu3.csv", head=TRUE, sep=",")
+
+
+cor.test(d$M201_1.1, d$M305_1.1,method="spearm")
+cor.test(d$M201_1.2, d$M305_1.2,method="spearm")
+cor.test(d$M201_2.1, d$M305_2.1,method="spearm")
+cor.test(d$M201_3.1, d$M305_3.1,method="spearm")
+cor.test(d$M201_3.2, d$M305_3.2,method="spearm")
+cor.test(d$M201_4.1, d$M305_4.1,method="spearm")
+cor.test(d$M201_4.2, d$M305_4.2,method="spearm")
+cor.test(d$M201_4.3, d$M305_4.3,method="spearm")
+cor.test(d$M201_4.4, d$M305_4.4,method="spearm")
+cor.test(d$M201_5.1, d$M305_5.1,method="spearm")
+cor.test(d$M201_5.2, d$M305_5.2,method="spearm")
+
+cor.test(d$M301_1.1, d$M305_1.1,method="spearm")
+cor.test(d$M301_1.2, d$M305_1.2,method="spearm")
+cor.test(d$M301_2.1, d$M305_2.1,method="spearm")
+cor.test(d$M301_3.1, d$M305_3.1,method="spearm")
+cor.test(d$M301_3.2, d$M305_3.2,method="spearm")
+cor.test(d$M301_4.1, d$M305_4.1,method="spearm")
+cor.test(d$M301_4.2, d$M305_4.2,method="spearm")
+cor.test(d$M301_4.3, d$M305_4.3,method="spearm")
+cor.test(d$M301_4.4, d$M305_4.4,method="spearm")
+cor.test(d$M301_5.1, d$M305_5.1,method="spearm")
+cor.test(d$M301_5.2, d$M305_5.2,method="spearm")
+
+cor.test(d$M201_1.1, d$M301_1.1,method="spearm")
+cor.test(d$M201_1.2, d$M301_1.2,method="spearm")
+cor.test(d$M201_2.1, d$M301_2.1,method="spearm")
+cor.test(d$M201_3.1, d$M301_3.1,method="spearm")
+cor.test(d$M201_3.2, d$M301_3.2,method="spearm")
+cor.test(d$M201_4.1, d$M301_4.1,method="spearm")
+cor.test(d$M201_4.2, d$M301_4.2,method="spearm")
+cor.test(d$M201_4.3, d$M301_4.3,method="spearm")
+cor.test(d$M201_4.4, d$M301_4.4,method="spearm")
+cor.test(d$M201_5.1, d$M301_5.1,method="spearm")
+cor.test(d$M201_5.2, d$M301_5.2,method="spearm")
+
+
